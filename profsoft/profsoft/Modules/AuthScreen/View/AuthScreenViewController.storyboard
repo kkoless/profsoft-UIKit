@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AuthScreenViewController" customModule="profsoft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpS-lm-YLs">
+                                <rect key="frame" x="16" y="778" width="382" height="30"/>
+                                <state key="normal" title="Продолжить без регистрации"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9s-S0-7N7">
+                                <rect key="frame" x="16" y="732" width="382" height="30"/>
+                                <state key="normal" title="Вход"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFSOFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2v-tO-gYv">
+                                <rect key="frame" x="78" y="434" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m9s-S0-7N7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6hX-ek-19c"/>
+                            <constraint firstItem="T2v-tO-gYv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="390" id="9bX-Yy-Rn2"/>
+                            <constraint firstItem="LpS-lm-YLs" firstAttribute="top" secondItem="m9s-S0-7N7" secondAttribute="bottom" constant="16" id="I1S-Gj-4zd"/>
+                            <constraint firstItem="LpS-lm-YLs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Kl0-Ww-1IK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m9s-S0-7N7" secondAttribute="trailing" constant="16" id="NgO-Zg-dFz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T2v-tO-gYv" secondAttribute="trailing" constant="78" id="ZwJ-Yg-CtX"/>
+                            <constraint firstItem="T2v-tO-gYv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="78" id="he0-q3-YGx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LpS-lm-YLs" secondAttribute="bottom" constant="54" id="qjL-hw-Ol8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LpS-lm-YLs" secondAttribute="trailing" constant="16" id="rst-YX-3KW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="companyLabel" destination="T2v-tO-gYv" id="5Cf-KX-tWS"/>
+                        <outlet property="enterButton" destination="m9s-S0-7N7" id="UT5-Dq-8BI"/>
+                        <outlet property="skipButton" destination="LpS-lm-YLs" id="96r-Tn-Z8N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
