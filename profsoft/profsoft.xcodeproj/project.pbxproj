@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8FED4D46606EC30161E6AB01 /* Pods_profsoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D94EABD260BA31189B3C73 /* Pods_profsoft.framework */; };
+		E534E91D26B15DF400C2A38B /* StartFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* StartFlow.swift */; };
+		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F6226B0901B005FAC4A /* AppDelegate.swift */; };
 		E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6B26B0901C005FAC4A /* Assets.xcassets */; };
 		E5709F6F26B0901C005FAC4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6D26B0901C005FAC4A /* LaunchScreen.storyboard */; };
@@ -16,18 +18,21 @@
 		E5709F8326B097A0005FAC4A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8226B097A0005FAC4A /* DateFormatters.swift */; };
 		E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8426B097FC005FAC4A /* AppStep.swift */; };
 		E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8626B09833005FAC4A /* AppFlow.swift */; };
-		E5709F8926B09982005FAC4A /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8826B09982005FAC4A /* ProfileFlow.swift */; };
-		E5709F9526B09FDE005FAC4A /* AuthScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9426B09FDE005FAC4A /* AuthScreenViewModel.swift */; };
-		E5709F9726B0A00C005FAC4A /* AuthScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9626B0A00C005FAC4A /* AuthScreenViewModelProtocols.swift */; };
-		E5709F9926B0B12D005FAC4A /* AuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9826B0B12D005FAC4A /* AuthFlow.swift */; };
-		E5709F9B26B0BE18005FAC4A /* AuthScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5709F9A26B0BE18005FAC4A /* AuthScreenViewController.storyboard */; };
-		E5709F9D26B0BFDB005FAC4A /* AuthScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9C26B0BFDB005FAC4A /* AuthScreenViewController.swift */; };
+		E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9426B09FDE005FAC4A /* StartScreenViewModel.swift */; };
+		E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9626B0A00C005FAC4A /* StartScreenViewModelProtocols.swift */; };
+		E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5709F9A26B0BE18005FAC4A /* StartScreenViewController.storyboard */; };
+		E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855F9E26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift */; };
+		E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */; };
+		E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */; };
+		E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18D94EABD260BA31189B3C73 /* Pods_profsoft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_profsoft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F6BD574805D5556902425 /* Pods-profsoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-profsoft.release.xcconfig"; path = "Target Support Files/Pods-profsoft/Pods-profsoft.release.xcconfig"; sourceTree = "<group>"; };
 		8E1496925D268E130F0211CB /* Pods-profsoft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-profsoft.debug.xcconfig"; path = "Target Support Files/Pods-profsoft/Pods-profsoft.debug.xcconfig"; sourceTree = "<group>"; };
+		E534E91C26B15DF400C2A38B /* StartFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFlow.swift; sourceTree = "<group>"; };
+		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E5709F5F26B0901B005FAC4A /* profsoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profsoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5709F6226B0901B005FAC4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5709F6B26B0901C005FAC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,12 +43,13 @@
 		E5709F8226B097A0005FAC4A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		E5709F8426B097FC005FAC4A /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		E5709F8626B09833005FAC4A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
-		E5709F8826B09982005FAC4A /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
-		E5709F9426B09FDE005FAC4A /* AuthScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewModel.swift; sourceTree = "<group>"; };
-		E5709F9626B0A00C005FAC4A /* AuthScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewModelProtocols.swift; sourceTree = "<group>"; };
-		E5709F9826B0B12D005FAC4A /* AuthFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlow.swift; sourceTree = "<group>"; };
-		E5709F9A26B0BE18005FAC4A /* AuthScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthScreenViewController.storyboard; sourceTree = "<group>"; };
-		E5709F9C26B0BFDB005FAC4A /* AuthScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewController.swift; sourceTree = "<group>"; };
+		E5709F9426B09FDE005FAC4A /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
+		E5709F9626B0A00C005FAC4A /* StartScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		E5709F9A26B0BE18005FAC4A /* StartScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreenViewController.storyboard; sourceTree = "<group>"; };
+		E5855F9E26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
+		E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreenViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +135,8 @@
 		E5709F7826B09181005FAC4A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E5709F8C26B09E51005FAC4A /* AuthScreen */,
+				E5855F9726B1B66400E104BE /* LoginScreen */,
+				E5709F8C26B09E51005FAC4A /* StartScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -153,8 +160,7 @@
 			children = (
 				E5709F8426B097FC005FAC4A /* AppStep.swift */,
 				E5709F8626B09833005FAC4A /* AppFlow.swift */,
-				E5709F9826B0B12D005FAC4A /* AuthFlow.swift */,
-				E5709F8826B09982005FAC4A /* ProfileFlow.swift */,
+				E534E91C26B15DF400C2A38B /* StartFlow.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -176,28 +182,20 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		E5709F8C26B09E51005FAC4A /* AuthScreen */ = {
+		E5709F8C26B09E51005FAC4A /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
 				E5709F8F26B09E7D005FAC4A /* ViewModel */,
 				E5709F8E26B09E77005FAC4A /* View */,
-				E5709F8D26B09E6D005FAC4A /* DataSource */,
 			);
-			path = AuthScreen;
-			sourceTree = "<group>";
-		};
-		E5709F8D26B09E6D005FAC4A /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataSource;
+			path = StartScreen;
 			sourceTree = "<group>";
 		};
 		E5709F8E26B09E77005FAC4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E5709F9A26B0BE18005FAC4A /* AuthScreenViewController.storyboard */,
-				E5709F9C26B0BFDB005FAC4A /* AuthScreenViewController.swift */,
+				E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */,
+				E5709F9A26B0BE18005FAC4A /* StartScreenViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,8 +203,35 @@
 		E5709F8F26B09E7D005FAC4A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E5709F9426B09FDE005FAC4A /* AuthScreenViewModel.swift */,
-				E5709F9626B0A00C005FAC4A /* AuthScreenViewModelProtocols.swift */,
+				E5709F9426B09FDE005FAC4A /* StartScreenViewModel.swift */,
+				E5709F9626B0A00C005FAC4A /* StartScreenViewModelProtocols.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5855F9726B1B66400E104BE /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E5855F9926B1B67C00E104BE /* ViewModel */,
+				E5855F9826B1B67400E104BE /* View */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		E5855F9826B1B67400E104BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */,
+				E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5855F9926B1B67C00E104BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5855F9E26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift */,
+				E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -272,7 +297,8 @@
 			files = (
 				E5709F6F26B0901C005FAC4A /* LaunchScreen.storyboard in Resources */,
 				E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */,
-				E5709F9B26B0BE18005FAC4A /* AuthScreenViewController.storyboard in Resources */,
+				E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */,
+				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,17 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */,
 				E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */,
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
-				E5709F9D26B0BFDB005FAC4A /* AuthScreenViewController.swift in Sources */,
 				E5709F8326B097A0005FAC4A /* DateFormatters.swift in Sources */,
-				E5709F9726B0A00C005FAC4A /* AuthScreenViewModelProtocols.swift in Sources */,
-				E5709F9926B0B12D005FAC4A /* AuthFlow.swift in Sources */,
+				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
+				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,
-				E5709F8926B09982005FAC4A /* ProfileFlow.swift in Sources */,
-				E5709F9526B09FDE005FAC4A /* AuthScreenViewModel.swift in Sources */,
+				E534E91D26B15DF400C2A38B /* StartFlow.swift in Sources */,
+				E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */,
+				E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */,
+				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +503,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = profsoft/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -483,6 +512,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kolesnikov.profsoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,7 +524,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = profsoft/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,6 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kolesnikov.profsoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

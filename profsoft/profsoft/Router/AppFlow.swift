@@ -19,14 +19,14 @@ final class AppFlow: Flow {
 	
 	private let rootWindow: UIWindow
 	private lazy var rootViewController: UINavigationController = {
-		let viewController = UINavigationController()
-		return viewController
-	}()
-	
+			let viewController = UINavigationController()
+			viewController.setNavigationBarHidden(true, animated: false)
+			return viewController
+		}()
 	
 	init(withWindow window: UIWindow) {
-		self.rootWindow = window
-	}
+			self.rootWindow = window
+		}
 	
 	deinit {
 		print("\(type(of: self)): \(#function)")
@@ -36,26 +36,22 @@ final class AppFlow: Flow {
 		guard let step = step as? AppStep else { return .none }
 		
 		switch step {
-			case .auth:
-				return navigationToAuthScreen()
+			case .initStep:
+				return navigateToStartFlow()
 			default:
 				return .none
 		}
 	}
 	
-	private func navigationToAuthScreen() -> FlowContributors {
-		//let auth = AuthFlow()
-		let viewController = AuthScreenViewController.instantiate()
-		let viewModel = AuthScreenViewModel()
-		viewController.inject(viewModel: viewModel)
+	private func navigateToStartFlow() -> FlowContributors {
+		let startFlow = StartFlow()
 		
-		//rootViewController.pushViewController(viewController, animated: true)
+		Flows.use(startFlow, when: .ready) { [unowned self] root in
+			self.rootWindow.rootViewController = root
+		}
 		
-		self.rootWindow.rootViewController = self.rootViewController
-		rootViewController.pushViewController(viewController, animated: true)
-
-		return .one(flowContributor: .contribute(withNextPresentable: viewController,
-												 withNextStepper: viewModel))
+		return .one(flowContributor: .contribute(withNextPresentable: startFlow,
+												 withNextStepper: OneStepper(withSingleStep: AppStep.start)))
 	}
 }
 
@@ -67,10 +63,10 @@ final class AppStepper: Stepper {
 	private let disposeBag = DisposeBag()
 
 	var initialStep: Step {
-		return AppStep.auth
+		return AppStep.initStep
 	}
 
 	func readyToEmitSteps() {
-		steps.accept(AppStep.auth)
+		steps.accept(AppStep.initStep)
 	}
 }

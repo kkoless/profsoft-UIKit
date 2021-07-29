@@ -1,5 +1,5 @@
 //
-//  AuthScreenViewController.swift
+//  StartScreenViewController.swift
 //  profsoft
 //
 //  Created by Кирилл Колесников on 28.07.2021.
@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Reusable
 
-class AuthScreenViewController: UIViewController, StoryboardBased {
+class StartScreenViewController: UIViewController, StoryboardBased {
 
 	private let disposeBag = DisposeBag()
 	
@@ -19,9 +19,9 @@ class AuthScreenViewController: UIViewController, StoryboardBased {
 	@IBOutlet weak var companyLabel: UILabel!
 	
 	
-	private var input: AuthScreenViewModelInputProtocol!
-	private var output: AuthScreenViewModelOutputProtocol!
-	private var viewModel: AuthScreenViewModelProtocol!
+	private var input: StartScreenViewModelInputProtocol!
+	private var output: StartScreenViewModelOutputProtocol!
+	private var viewModel: StartScreenViewModelProtocol!
 	
 	private let onAppear = PublishRelay<Void>()
 
@@ -35,13 +35,13 @@ class AuthScreenViewController: UIViewController, StoryboardBased {
 		onAppear.accept(())
 	}
 	
-	func inject(viewModel: AuthScreenViewModelProtocol){
+	func inject(viewModel: StartScreenViewModelProtocol){
 		self.viewModel = viewModel
 	}
 
 }
 
-private extension AuthScreenViewController {
+private extension StartScreenViewController {
 	func configureUI(){
 		configureEnterButton()
 		configureSkipButton()
@@ -51,10 +51,12 @@ private extension AuthScreenViewController {
 		enterButton.setTitle("Вход", for: .normal)
 		enterButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 		enterButton.tintColor = .white
+		
 		enterButton.backgroundColor = .black
 		enterButton.layer.cornerRadius = 22
 		enterButton.layer.borderWidth = 2
 		enterButton.layer.borderColor = UIColor.black.cgColor
+		
 		enterButton.contentEdgeInsets = UIEdgeInsets(top: 13, left: 8, bottom: 13, right: 8)
 	}
 	
@@ -62,10 +64,12 @@ private extension AuthScreenViewController {
 		skipButton.setTitle("Продолжить без регистрации", for: .normal)
 		skipButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 		skipButton.tintColor = .black
+		
 		skipButton.backgroundColor = .white
 		skipButton.layer.cornerRadius = 22
 		skipButton.layer.borderWidth = 2
 		skipButton.layer.borderColor = UIColor.black.cgColor
+		
 		skipButton.contentEdgeInsets = UIEdgeInsets(top: 13, left: 8, bottom: 13, right: 8)
 		
 		
@@ -73,13 +77,14 @@ private extension AuthScreenViewController {
 
 }
 
-private extension AuthScreenViewController {
+private extension StartScreenViewController {
 	func bindUI(){
 		bindViewModel()
 	}
 	
 	func bindViewModel(){
-		let input = AuthScreenViewModelInput(onAppear: onAppear.asObservable())
+		let input = StartScreenViewModelInput(enterButton: enterButton, skipButton: skipButton)
+	
 
 		output = viewModel.transform(input: input)
 	}
