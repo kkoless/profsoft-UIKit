@@ -10,7 +10,6 @@ import RxCocoa
 import RxSwift
 
 protocol LoginScreenViewModelInputProtocol {
-	
 }
 
 protocol LoginScreenViewModelOutputProtocol {

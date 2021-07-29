@@ -30,7 +30,7 @@ extension StartScreenViewModel: StartScreenViewModelProtocol {
 	func transform(input: StartScreenViewModelInputProtocol) -> StartScreenViewModelOutputProtocol {
 		
 		input.enterButton.rx.tap
-			.map{ AppStep.userLogin }.bind(to: steps)
+			.map{ AppStep.userLogin }.bind(to: steps).disposed(by: disposeBag)
 		
 		
 		let output = StartScreenViewModelOutput()

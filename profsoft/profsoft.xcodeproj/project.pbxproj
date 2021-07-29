@@ -25,6 +25,8 @@
 		E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */; };
 		E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */; };
 		E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */; };
+		E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FAA26B2A9FA00E104BE /* LoginScreenTextFields.swift */; };
+		E5855FAE26B30F8300E104BE /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreenViewController.storyboard; sourceTree = "<group>"; };
+		E5855FAA26B2A9FA00E104BE /* LoginScreenTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTextFields.swift; sourceTree = "<group>"; };
+		E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		E5709F7C26B091B8005FAC4A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E5855FA826B2A99C00E104BE /* UI */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		E5709F7D26B091C7005FAC4A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E5855FAC26B30F5600E104BE /* Extensions */,
 				E5709F7E26B091E0005FAC4A /* Consts.swift */,
 				E5709F8026B0977C005FAC4A /* CellBuilder.swift */,
 				E5709F8226B097A0005FAC4A /* DateFormatters.swift */,
@@ -230,10 +236,34 @@
 		E5855F9926B1B67C00E104BE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E5855F9E26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift */,
 				E5855FA026B1B73600E104BE /* LoginScreenViewModel.swift */,
+				E5855F9E26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5855FA826B2A99C00E104BE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E5855FA926B2A9AD00E104BE /* TextFields */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E5855FA926B2A9AD00E104BE /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				E5855FAA26B2A9FA00E104BE /* LoginScreenTextFields.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		E5855FAC26B30F5600E104BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +383,8 @@
 			files = (
 				E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */,
 				E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */,
+				E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */,
+				E5855FAE26B30F8300E104BE /* UITextField+Extensions.swift in Sources */,
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
 				E5709F8326B097A0005FAC4A /* DateFormatters.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,

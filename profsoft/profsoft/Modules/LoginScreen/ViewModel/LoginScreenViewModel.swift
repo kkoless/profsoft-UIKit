@@ -11,7 +11,6 @@ import RxSwift
 import RxFlow
 
 struct LoginScreenViewModelInput: LoginScreenViewModelInputProtocol {
-	
 }
 
 struct LoginScreenViewModelOutput: LoginScreenViewModelOutputProtocol {
@@ -21,12 +20,10 @@ struct LoginScreenViewModelOutput: LoginScreenViewModelOutputProtocol {
 struct LoginScreenViewModel: Stepper {
 	let disposeBag = DisposeBag()
 	var steps = PublishRelay<Step>()
-	
 }
 
 extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 	func transform(input: LoginScreenViewModelInputProtocol) -> LoginScreenViewModelOutputProtocol {
-		
 		
 		let output = LoginScreenViewModelOutput()
 		
