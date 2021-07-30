@@ -72,7 +72,6 @@ private extension StartScreenViewController {
 		
 		skipButton.contentEdgeInsets = UIEdgeInsets(top: 13, left: 8, bottom: 13, right: 8)
 		
-		
 	}
 
 }
@@ -84,7 +83,6 @@ private extension StartScreenViewController {
 	
 	func bindViewModel(){
 		let input = StartScreenViewModelInput(enterButton: enterButton, skipButton: skipButton)
-	
 
 		output = viewModel.transform(input: input)
 	}

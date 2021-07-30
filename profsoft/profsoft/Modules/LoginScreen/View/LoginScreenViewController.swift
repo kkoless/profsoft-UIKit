@@ -16,12 +16,12 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	private let disposeBag = DisposeBag()	
 	
 	@IBOutlet private weak var enterButton: UIButton!
-	@IBOutlet weak var forgotPassButton: UIButton!
+	@IBOutlet private weak var forgotPassButton: UIButton!
 	
 	@IBOutlet private weak var passwordTextField: UITextField!
-	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet private weak var emailTextField: UITextField!
 	
-	@IBOutlet weak var companyLabel: UILabel!
+	@IBOutlet private weak var companyLabel: UILabel!
 	
 	private var showPassButton =  UIButton()
 	private let openEye = UIImage(named: "openEye")
@@ -120,18 +120,6 @@ private extension LoginScreenViewController {
 		forgotPassButton.tintColor = .gray
 		forgotPassButton.contentHorizontalAlignment = .left
 		forgotPassButton.setTitle("Забыли пароль?", for: .normal)
-		
-		forgotPassButton.rx.tap
-			.asObservable()
-			.subscribe(
-				onNext: {
-					let urlCompany = URL(string: "academy@profsoft.pro")!
-					let alert = UIAlertController(title: "Забыли пароль?", message: "Напишите в поддержку \(urlCompany)",         preferredStyle: .alert)
-					
-					alert.addAction(UIAlertAction(title: "Вернуться", style: .default))
-					self.present(alert, animated: true, completion: nil)
-				})
-			.disposed(by: disposeBag)
 	}
 	
 	
@@ -143,7 +131,7 @@ private extension LoginScreenViewController {
 	}
 	
 	func bindViewModel(){
-		let input = LoginScreenViewModelInput()
+		let input = LoginScreenViewModelInput(forgotPassButton: forgotPassButton)
 	
 
 		output = viewModel.transform(input: input)

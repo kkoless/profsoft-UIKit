@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import RxFlow
 
-class StartFlow: Flow {
+class OnboardingFlow: Flow {
 	var root: Presentable {
 		return self.rootViewController
 	}
@@ -30,8 +30,10 @@ class StartFlow: Flow {
 		switch step {
 			case .start:
 				return navigationToStartScreen()
-			case .userLogin:
+			case .login:
 				return navigationToLoginScreen()
+			case .showAlert:
+				return showAlert()
 			default:
 				return .none
 		}
@@ -49,16 +51,25 @@ class StartFlow: Flow {
 		return .one(flowContributor: .contribute(withNextPresentable: startViewController, withNextStepper: startViewModel))
 	}
 	
-	
 	private func navigationToLoginScreen() -> FlowContributors {
 		let loginViewController = LoginScreenViewController.instantiate()
 		let loginViewModel = LoginScreenViewModel()
 		loginViewController.inject(viewModel: loginViewModel)
-		
+			
 		
 		self.rootViewController.pushViewController(loginViewController, animated: true)
 		
 		
 		return .one(flowContributor: .contribute(withNextPresentable: loginViewController, withNextStepper: loginViewModel))
 	}
+	
+	private func showAlert() -> FlowContributors {
+		let alert = AlertHelper.oneButtonCancel
+		
+		self.rootViewController.present(alert, animated: true)
+		
+		return .one(flowContributor: .contribute(withNextPresentable: alert, withNextStepper: OneStepper(withSingleStep: AppStep.none)))
+	}
+
+	
 }

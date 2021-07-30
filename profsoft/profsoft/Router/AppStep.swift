@@ -10,11 +10,16 @@ import RxFlow
 import RxCocoa
 
 enum AppStep: Step {
-	case initStep
-	case start
 	
-	case userLogin // Перенаправит на экран ввода логина/пароля
-	case userSkipLogin // Перенаправит сразу дальше (допустим на экран профиля пользователя)
+	case initStep // Перенаправит на StartFlow
+	
+	case start // Перенаправит на StartScreen
+
+	case login // Перенапрявляет на LoginScreen
+	
+	case showAlert // Покажет Alert на LoginScreen
+	
+	case userSkipLogin // Перенаправит на ProfileScreen
 	
 	
 	case none

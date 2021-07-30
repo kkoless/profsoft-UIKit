@@ -44,13 +44,13 @@ final class AppFlow: Flow {
 	}
 	
 	private func navigateToStartFlow() -> FlowContributors {
-		let startFlow = StartFlow()
+		let onboardingFlow = OnboardingFlow()
 		
-		Flows.use(startFlow, when: .ready) { [unowned self] root in
+		Flows.use(onboardingFlow, when: .ready) { [unowned self] root in
 			self.rootWindow.rootViewController = root
 		}
 		
-		return .one(flowContributor: .contribute(withNextPresentable: startFlow,
+		return .one(flowContributor: .contribute(withNextPresentable: onboardingFlow,
 												 withNextStepper: OneStepper(withSingleStep: AppStep.start)))
 	}
 }

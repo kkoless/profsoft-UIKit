@@ -11,6 +11,8 @@ import RxSwift
 import RxFlow
 
 struct LoginScreenViewModelInput: LoginScreenViewModelInputProtocol {
+	var forgotPassButton: UIButton
+	
 }
 
 struct LoginScreenViewModelOutput: LoginScreenViewModelOutputProtocol {
@@ -24,6 +26,11 @@ struct LoginScreenViewModel: Stepper {
 
 extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 	func transform(input: LoginScreenViewModelInputProtocol) -> LoginScreenViewModelOutputProtocol {
+		
+		input.forgotPassButton.rx.tap
+			.map{AppStep.showAlert}
+			.bind(to: steps)
+			.disposed(by: disposeBag)
 		
 		let output = LoginScreenViewModelOutput()
 		

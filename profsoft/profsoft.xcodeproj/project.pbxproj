@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8FED4D46606EC30161E6AB01 /* Pods_profsoft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D94EABD260BA31189B3C73 /* Pods_profsoft.framework */; };
-		E534E91D26B15DF400C2A38B /* StartFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* StartFlow.swift */; };
+		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F6226B0901B005FAC4A /* AppDelegate.swift */; };
 		E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6B26B0901C005FAC4A /* Assets.xcassets */; };
 		E5709F6F26B0901C005FAC4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6D26B0901C005FAC4A /* LaunchScreen.storyboard */; };
 		E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F7E26B091E0005FAC4A /* Consts.swift */; };
 		E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8026B0977C005FAC4A /* CellBuilder.swift */; };
-		E5709F8326B097A0005FAC4A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8226B097A0005FAC4A /* DateFormatters.swift */; };
 		E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8426B097FC005FAC4A /* AppStep.swift */; };
 		E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F8626B09833005FAC4A /* AppFlow.swift */; };
 		E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F9426B09FDE005FAC4A /* StartScreenViewModel.swift */; };
@@ -26,14 +25,14 @@
 		E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */; };
 		E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */; };
 		E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FAA26B2A9FA00E104BE /* LoginScreenTextFields.swift */; };
-		E5855FAE26B30F8300E104BE /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */; };
+		E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5855FB326B34F7500E104BE /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18D94EABD260BA31189B3C73 /* Pods_profsoft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_profsoft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F6BD574805D5556902425 /* Pods-profsoft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-profsoft.release.xcconfig"; path = "Target Support Files/Pods-profsoft/Pods-profsoft.release.xcconfig"; sourceTree = "<group>"; };
 		8E1496925D268E130F0211CB /* Pods-profsoft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-profsoft.debug.xcconfig"; path = "Target Support Files/Pods-profsoft/Pods-profsoft.debug.xcconfig"; sourceTree = "<group>"; };
-		E534E91C26B15DF400C2A38B /* StartFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFlow.swift; sourceTree = "<group>"; };
+		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E5709F5F26B0901B005FAC4A /* profsoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profsoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5709F6226B0901B005FAC4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +41,6 @@
 		E5709F7026B0901C005FAC4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5709F7E26B091E0005FAC4A /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		E5709F8026B0977C005FAC4A /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
-		E5709F8226B097A0005FAC4A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		E5709F8426B097FC005FAC4A /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		E5709F8626B09833005FAC4A /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		E5709F9426B09FDE005FAC4A /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
@@ -53,7 +51,7 @@
 		E5855FA426B1CA6700E104BE /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		E5855FA626B1CB9B00E104BE /* LoginScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreenViewController.storyboard; sourceTree = "<group>"; };
 		E5855FAA26B2A9FA00E104BE /* LoginScreenTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTextFields.swift; sourceTree = "<group>"; };
-		E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		E5855FB326B34F7500E104BE /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,7 @@
 			children = (
 				E5709F8426B097FC005FAC4A /* AppStep.swift */,
 				E5709F8626B09833005FAC4A /* AppFlow.swift */,
-				E534E91C26B15DF400C2A38B /* StartFlow.swift */,
+				E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -183,7 +181,7 @@
 				E5855FAC26B30F5600E104BE /* Extensions */,
 				E5709F7E26B091E0005FAC4A /* Consts.swift */,
 				E5709F8026B0977C005FAC4A /* CellBuilder.swift */,
-				E5709F8226B097A0005FAC4A /* DateFormatters.swift */,
+				E5855FB326B34F7500E104BE /* AlertHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -261,7 +259,6 @@
 		E5855FAC26B30F5600E104BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E5855FAD26B30F8300E104BE /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,15 +381,14 @@
 				E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */,
 				E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */,
 				E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */,
-				E5855FAE26B30F8300E104BE /* UITextField+Extensions.swift in Sources */,
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
-				E5709F8326B097A0005FAC4A /* DateFormatters.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,
-				E534E91D26B15DF400C2A38B /* StartFlow.swift in Sources */,
+				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
+				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
 				E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */,
 				E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */,
 				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,

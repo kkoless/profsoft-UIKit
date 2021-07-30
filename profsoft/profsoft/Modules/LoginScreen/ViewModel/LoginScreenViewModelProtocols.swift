@@ -10,6 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol LoginScreenViewModelInputProtocol {
+	var forgotPassButton: UIButton { get }
 }
 
 protocol LoginScreenViewModelOutputProtocol {
