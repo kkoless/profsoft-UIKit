@@ -10,6 +10,7 @@ import UIKit
 import RxFlow
 
 class OnboardingFlow: Flow {
+	
 	var root: Presentable {
 		return self.rootViewController
 	}
@@ -44,9 +45,7 @@ class OnboardingFlow: Flow {
 		let startViewModel = StartScreenViewModel()
 		startViewController.inject(viewModel: startViewModel)
 		
-		
 		self.rootViewController.pushViewController(startViewController, animated: true)
-		
 		
 		return .one(flowContributor: .contribute(withNextPresentable: startViewController, withNextStepper: startViewModel))
 	}
@@ -56,9 +55,7 @@ class OnboardingFlow: Flow {
 		let loginViewModel = LoginScreenViewModel()
 		loginViewController.inject(viewModel: loginViewModel)
 			
-		
 		self.rootViewController.pushViewController(loginViewController, animated: true)
-		
 		
 		return .one(flowContributor: .contribute(withNextPresentable: loginViewController, withNextStepper: loginViewModel))
 	}
@@ -71,5 +68,4 @@ class OnboardingFlow: Flow {
 		return .one(flowContributor: .contribute(withNextPresentable: alert, withNextStepper: OneStepper(withSingleStep: AppStep.none)))
 	}
 
-	
 }

@@ -36,6 +36,7 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+
 		configureUI()
 		bindUI()
     }
@@ -47,8 +48,33 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	func inject(viewModel: LoginScreenViewModelProtocol){
 		self.viewModel = viewModel
 	}
+	
+
 
 }
+
+
+extension LoginScreenViewController: UITextFieldDelegate {
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		passwordTextField.resignFirstResponder()
+		emailTextField.resignFirstResponder()
+		return true
+	}
+	
+//	func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//		return true
+//	}
+//
+//	func textFieldDidBeginEditing(_ textField: UITextField) {
+//	}
+//
+//	func textFieldDidEndEditing(_ textField: UITextField) {
+//	}
+	
+	
+}
+
 
 private extension LoginScreenViewController {
 	func configureUI(){
@@ -64,8 +90,8 @@ private extension LoginScreenViewController {
 		enterButton.setTitle("Вход", for: .normal)
 		enterButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 		enterButton.tintColor = .white
-		
 		enterButton.backgroundColor = .gray
+		
 		enterButton.layer.cornerRadius = 22
 		enterButton.layer.borderWidth = 2
 		enterButton.layer.borderColor = UIColor.gray.cgColor
@@ -74,11 +100,12 @@ private extension LoginScreenViewController {
 	}
 	
 	func configurePassTextField(){
+		passwordTextField.delegate = self
+		
 		passwordTextField.placeholder = "Пароль"
 		passwordTextField.isSecureTextEntry = true
 		
 		passwordTextField.font = UIFont(name: "Golos", size: 16)
-		
 		
 		passwordTextField.layer.borderColor = UIColor.black.cgColor
 		passwordTextField.layer.borderWidth = 1.5
@@ -98,15 +125,15 @@ private extension LoginScreenViewController {
 	}
 	
 	func configureEmailTextField(){
+		emailTextField.delegate = self
+		
 		emailTextField.placeholder = "Email"
 		
 		emailTextField.font = UIFont(name: "Golos", size: 16)
 		
-		
 		emailTextField.layer.borderColor = UIColor.black.cgColor
 		emailTextField.layer.borderWidth = 1.5
 		emailTextField.layer.cornerRadius = 22
-		
 		emailTextField.layer.masksToBounds = true
 	}
 	
@@ -122,8 +149,8 @@ private extension LoginScreenViewController {
 		forgotPassButton.setTitle("Забыли пароль?", for: .normal)
 	}
 	
-	
 }
+
 
 private extension LoginScreenViewController {
 	func bindUI(){
@@ -131,7 +158,7 @@ private extension LoginScreenViewController {
 	}
 	
 	func bindViewModel(){
-		let input = LoginScreenViewModelInput(forgotPassButton: forgotPassButton)
+		let input = LoginScreenViewModelInput(emailTextField: emailTextField, passwordTextField: passwordTextField, forgotPassButton: forgotPassButton)
 	
 
 		output = viewModel.transform(input: input)
