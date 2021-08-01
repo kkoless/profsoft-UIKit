@@ -30,42 +30,60 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFSOFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDl-jO-sJ5">
-                                <rect key="frame" x="78" y="349" width="258" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-NQ-Dc6">
                                 <rect key="frame" x="16" y="762" width="328" height="30"/>
                                 <state key="normal" title="Забыли пароль?"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PasswordError" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpJ-dn-atD" userLabel="PasswordErrorLabel">
+                                <rect key="frame" x="45" y="653" width="324" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmailError" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYc-cL-ElX" userLabel="EmailErrorLabel">
+                                <rect key="frame" x="45" y="535" width="324" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRW-wd-fn5">
+                                <rect key="frame" x="78" y="253" width="258" height="117"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AYc-cL-ElX" secondAttribute="trailing" constant="45" id="1C3-am-IKP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lTo-Es-6I8" secondAttribute="trailing" constant="16" id="B32-94-HAP"/>
                             <constraint firstItem="lTo-Es-6I8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="DPs-97-DBu"/>
+                            <constraint firstItem="rRW-wd-fn5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="78" id="EcX-Ac-2KQ"/>
                             <constraint firstItem="IeA-UO-bXo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Fhr-uz-KiC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IeA-UO-bXo" secondAttribute="trailing" constant="16" id="HfM-wf-VlR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iDl-jO-sJ5" secondAttribute="trailing" constant="78" id="cEk-X5-xVq"/>
+                            <constraint firstItem="lTo-Es-6I8" firstAttribute="top" secondItem="rRW-wd-fn5" secondAttribute="bottom" constant="193" id="JaU-vi-hpd"/>
+                            <constraint firstItem="PpJ-dn-atD" firstAttribute="top" secondItem="IeA-UO-bXo" secondAttribute="bottom" constant="7" id="MvT-lI-qJC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rRW-wd-fn5" secondAttribute="trailing" constant="78" id="VOu-RM-ONo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vQh-NQ-Dc6" secondAttribute="trailing" constant="70" id="cII-l7-eeK"/>
                             <constraint firstItem="4i5-GA-mm0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="d2x-mc-Vha"/>
-                            <constraint firstItem="lTo-Es-6I8" firstAttribute="top" secondItem="iDl-jO-sJ5" secondAttribute="bottom" constant="193" id="eVC-zU-pdY"/>
+                            <constraint firstItem="AYc-cL-ElX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="eE4-BN-LlA"/>
+                            <constraint firstItem="rRW-wd-fn5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="209" id="ec1-Fs-DOI"/>
                             <constraint firstItem="vQh-NQ-Dc6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="emZ-0M-KVE"/>
                             <constraint firstItem="4i5-GA-mm0" firstAttribute="top" secondItem="vQh-NQ-Dc6" secondAttribute="bottom" constant="20" id="fna-gv-TwT"/>
-                            <constraint firstItem="iDl-jO-sJ5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="78" id="hBw-UW-Od7"/>
+                            <constraint firstItem="lTo-Es-6I8" firstAttribute="top" secondItem="AYc-cL-ElX" secondAttribute="bottom" constant="7" id="htb-Pr-Viq"/>
                             <constraint firstItem="vQh-NQ-Dc6" firstAttribute="top" secondItem="IeA-UO-bXo" secondAttribute="bottom" constant="116" id="kmI-iZ-277"/>
                             <constraint firstItem="IeA-UO-bXo" firstAttribute="top" secondItem="lTo-Es-6I8" secondAttribute="bottom" constant="15" id="ooj-6U-Mkg"/>
                             <constraint firstAttribute="bottom" secondItem="4i5-GA-mm0" secondAttribute="bottom" constant="54" id="ozT-4r-1v4"/>
+                            <constraint firstItem="PpJ-dn-atD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="r2w-24-FrR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PpJ-dn-atD" secondAttribute="trailing" constant="45" id="rN8-FZ-k2M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4i5-GA-mm0" secondAttribute="trailing" constant="16" id="wcN-Ss-qc4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="companyLabel" destination="iDl-jO-sJ5" id="hcy-Rv-pmk"/>
+                        <outlet property="companyLogoImageView" destination="rRW-wd-fn5" id="Gnz-fh-4tI"/>
+                        <outlet property="emailErrorLabel" destination="AYc-cL-ElX" id="Qqv-U9-MMS"/>
                         <outlet property="emailTextField" destination="lTo-Es-6I8" id="5II-pT-zSL"/>
                         <outlet property="enterButton" destination="4i5-GA-mm0" id="Jk0-MF-WVH"/>
                         <outlet property="forgotPassButton" destination="vQh-NQ-Dc6" id="IOd-xa-k6J"/>
+                        <outlet property="passwordErrorLabel" destination="PpJ-dn-atD" id="pW5-Od-L1f"/>
                         <outlet property="passwordTextField" destination="IeA-UO-bXo" id="pya-6o-6dD"/>
                     </connections>
                 </viewController>

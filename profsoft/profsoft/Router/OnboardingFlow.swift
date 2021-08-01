@@ -35,6 +35,8 @@ class OnboardingFlow: Flow {
 				return navigationToLoginScreen()
 			case .showAlert:
 				return showAlert()
+			case .loginSucces, .userSkipLogin:
+				return navigationToProfileScreen()
 			default:
 				return .none
 		}
@@ -66,6 +68,24 @@ class OnboardingFlow: Flow {
 		self.rootViewController.present(alert, animated: true)
 		
 		return .one(flowContributor: .contribute(withNextPresentable: alert, withNextStepper: OneStepper(withSingleStep: AppStep.none)))
+	}
+	
+	func navigationToProfileScreen() -> FlowContributors {
+//		let profileViewController = ProfileScreenViewController.instantiate()
+//		let profileViewModel = ProfileScreenViewModel()
+//		profileViewController.inject(viewModel: profileViewModel)
+//
+//		self.rootViewController.pushViewController(profileViewController, animated: true)
+//
+//		return .one(flowContributor: .contribute(withNextPresentable: profileViewController, withNextStepper: profileViewModel))
+		
+		let startViewController = StartScreenViewController.instantiate()
+		let startViewModel = StartScreenViewModel()
+		startViewController.inject(viewModel: startViewModel)
+		
+		self.rootViewController.pushViewController(startViewController, animated: true)
+		
+		return .one(flowContributor: .contribute(withNextPresentable: startViewController, withNextStepper: startViewModel))
 	}
 
 }

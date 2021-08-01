@@ -9,4 +9,10 @@ import Foundation
 
 enum Consts{
 	
+	enum UserCredentials {
+		static let email = "kirill@gmail.com"
+		static let password = "qwerty123"
+	}
+	
+	
 }

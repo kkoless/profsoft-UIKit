@@ -19,6 +19,7 @@ enum AppStep: Step {
 	
 	case showAlert // Покажет Alert на LoginScreen
 	
+	case loginSucces // При успешном входе перенаправит на ProfileScreen
 	case userSkipLogin // Перенаправит на ProfileScreen
 	
 	

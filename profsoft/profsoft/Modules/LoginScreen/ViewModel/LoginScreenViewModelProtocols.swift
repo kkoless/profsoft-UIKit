@@ -11,8 +11,14 @@ import RxSwift
 
 protocol LoginScreenViewModelInputProtocol {
 	var forgotPassButton: UIButton { get }
+	var enterButton: UIButton { get }
+	var showPassButton: UIButton { get }
+	
 	var passwordTextField: UITextField { get }
 	var emailTextField: UITextField { get }
+	
+	var passwordErrorLabel: UILabel { get }
+	var emailErrorLabel: UILabel { get }
 }
 
 protocol LoginScreenViewModelOutputProtocol {
