@@ -18,7 +18,6 @@ class StartScreenViewController: UIViewController, StoryboardBased {
 	@IBOutlet weak var skipButton: UIButton!
 	
 	@IBOutlet weak var companyNameImageView: UIImageView!
-	private let companyLogo = UIImage(named: "companyLogo")
 	
 	
 	private var input: StartScreenViewModelInputProtocol!
@@ -74,11 +73,10 @@ private extension StartScreenViewController {
 		skipButton.layer.borderColor = UIColor.black.cgColor
 		
 		skipButton.contentEdgeInsets = UIEdgeInsets(top: 13, left: 8, bottom: 13, right: 8)
-		
 	}
 	
 	func configureCompanyLogo(){
-		companyNameImageView.image = companyLogo
+		companyNameImageView.image = Consts.ImageLoginScreen.companyLogo
 	}
 
 }

@@ -36,7 +36,8 @@ class OnboardingFlow: Flow {
 			case .showAlert:
 				return showAlert()
 			case .loginSucces, .userSkipLogin:
-				return navigationToProfileScreen()
+				return navigateToDashboardFlow()
+				
 			default:
 				return .none
 		}
@@ -70,22 +71,15 @@ class OnboardingFlow: Flow {
 		return .one(flowContributor: .contribute(withNextPresentable: alert, withNextStepper: OneStepper(withSingleStep: AppStep.none)))
 	}
 	
-	func navigationToProfileScreen() -> FlowContributors {
-//		let profileViewController = ProfileScreenViewController.instantiate()
-//		let profileViewModel = ProfileScreenViewModel()
-//		profileViewController.inject(viewModel: profileViewModel)
-//
-//		self.rootViewController.pushViewController(profileViewController, animated: true)
-//
-//		return .one(flowContributor: .contribute(withNextPresentable: profileViewController, withNextStepper: profileViewModel))
+	private func navigateToDashboardFlow() -> FlowContributors {
+		let dashboard = DashboardFlow()
 		
-		let startViewController = StartScreenViewController.instantiate()
-		let startViewModel = StartScreenViewModel()
-		startViewController.inject(viewModel: startViewModel)
-		
-		self.rootViewController.pushViewController(startViewController, animated: true)
-		
-		return .one(flowContributor: .contribute(withNextPresentable: startViewController, withNextStepper: startViewModel))
+		Flows.use(dashboard, when: .ready) { root in
+			self.rootViewController.pushViewController(root, animated: true)
+		}
+
+		return .one(flowContributor: .contribute(withNextPresentable: dashboard,
+												 withNextStepper: OneStepper(withSingleStep: AppStep.dashboard)))
 	}
 
 }

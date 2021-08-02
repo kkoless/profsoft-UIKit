@@ -24,13 +24,10 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	@IBOutlet private weak var passwordErrorLabel: UILabel!
 	@IBOutlet private weak var emailErrorLabel: UILabel!
 	
-	
 	@IBOutlet private weak var companyLogoImageView: UIImageView!
-	private let companyLogo = UIImage(named: "companyLogo")
 	
 	private var showPassButton =  UIButton()
-	private let openEye = UIImage(named: "openEye")
-	private let closeEye = UIImage(named: "closeEye")
+	
 	
 	private var input: LoginScreenViewModelInputProtocol!
 	private var output: LoginScreenViewModelOutputProtocol!
@@ -40,7 +37,6 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		configureUI()
 		bindUI()
     }
@@ -59,11 +55,33 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 extension LoginScreenViewController: UITextFieldDelegate {
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		passwordTextField.resignFirstResponder()
-		emailTextField.resignFirstResponder()
+		
+		switch textField {
+			case passwordTextField, emailTextField:
+				textField.resignFirstResponder()
+			default:
+				return false
+		}
+		
 		return true
 	}
 
+}
+
+private extension LoginScreenViewController {
+	
+	@objc func keyboardWillShow(notification: NSNotification) {
+		guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+			return
+		}
+		
+		self.view.frame.origin.y = 0 - keyboardSize.height
+	}
+	
+	@objc func keyboardWillHide(notification: NSNotification) {
+		self.view.frame.origin.y = 0
+	}
+	
 }
 
 
@@ -94,12 +112,11 @@ private extension LoginScreenViewController {
 	}
 	
 	func configureCompanyLogo(){
-		companyLogoImageView.image = companyLogo
+		companyLogoImageView.image = Consts.ImageLoginScreen.companyLogo
 	}
 	
 	
 	func configureKeyboard(){
-		
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
@@ -107,33 +124,13 @@ private extension LoginScreenViewController {
 }
 
 private extension LoginScreenViewController {
-	
-	@objc func keyboardWillShow(notification: NSNotification) {
-		guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-		   // if keyboard size is not available for some reason, dont do anything
-		   return
-		}
-	  
-	  // move the root view up by the distance of keyboard height
-	  self.view.frame.origin.y = 0 - keyboardSize.height
-	}
-
-	@objc func keyboardWillHide(notification: NSNotification) {
-	  // move back the root view origin to zero
-	  self.view.frame.origin.y = 0
-	}
-	
-}
-
-
-private extension LoginScreenViewController {
 	 
 	func configureEnterButton() {
 		enterButton.setTitle("Вход", for: .normal)
 		enterButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
 		enterButton.tintColor = .white
-		enterButton.backgroundColor = .black
 		
+		enterButton.backgroundColor = .black
 		enterButton.layer.cornerRadius = 22
 		enterButton.layer.borderWidth = 2
 		enterButton.layer.borderColor = UIColor.black.cgColor
@@ -161,7 +158,7 @@ private extension LoginScreenViewController {
 			guard let self = self else { return }
 			self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
 			self.showPassState.accept(!self.showPassState.value)
-			self.showPassButton.setImage(state ? self.openEye : self.closeEye, for: .normal)
+			self.showPassButton.setImage(state ? Consts.ImageLoginScreen.openEye : Consts.ImageLoginScreen.closeEye, for: .normal)
 		})
 		.disposed(by: disposeBag)
 	}
@@ -182,7 +179,7 @@ private extension LoginScreenViewController {
 	
 	func configureShowPassButton() {
 		showPassButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -25, bottom: 0, right: 25)
-		showPassButton.setImage(openEye, for: .normal)
+		showPassButton.setImage(Consts.ImageLoginScreen.openEye, for: .normal)
 	}
 	
 	func configureForgotPassButton() {

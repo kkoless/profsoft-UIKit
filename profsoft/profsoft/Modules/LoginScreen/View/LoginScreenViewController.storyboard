@@ -70,8 +70,8 @@
                             <constraint firstItem="4i5-GA-mm0" firstAttribute="top" secondItem="vQh-NQ-Dc6" secondAttribute="bottom" constant="20" id="fna-gv-TwT"/>
                             <constraint firstItem="lTo-Es-6I8" firstAttribute="top" secondItem="AYc-cL-ElX" secondAttribute="bottom" constant="7" id="htb-Pr-Viq"/>
                             <constraint firstItem="vQh-NQ-Dc6" firstAttribute="top" secondItem="IeA-UO-bXo" secondAttribute="bottom" constant="116" id="kmI-iZ-277"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4i5-GA-mm0" secondAttribute="bottom" constant="20" id="oPu-3r-6eG"/>
                             <constraint firstItem="IeA-UO-bXo" firstAttribute="top" secondItem="lTo-Es-6I8" secondAttribute="bottom" constant="15" id="ooj-6U-Mkg"/>
-                            <constraint firstAttribute="bottom" secondItem="4i5-GA-mm0" secondAttribute="bottom" constant="54" id="ozT-4r-1v4"/>
                             <constraint firstItem="PpJ-dn-atD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="r2w-24-FrR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PpJ-dn-atD" secondAttribute="trailing" constant="45" id="rN8-FZ-k2M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4i5-GA-mm0" secondAttribute="trailing" constant="16" id="wcN-Ss-qc4"/>

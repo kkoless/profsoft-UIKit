@@ -22,6 +22,8 @@ enum AppStep: Step {
 	case loginSucces // При успешном входе перенаправит на ProfileScreen
 	case userSkipLogin // Перенаправит на ProfileScreen
 	
+	case dashboard
+	case userProfile
 	
 	case none
 }
