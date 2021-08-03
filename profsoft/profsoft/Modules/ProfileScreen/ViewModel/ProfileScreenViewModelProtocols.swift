@@ -10,9 +10,12 @@ import RxCocoa
 import RxSwift
 
 protocol ProfileScreenViewModelInputProtocol {
+	var onAppear: Observable<Void> { get }
 }
 
 protocol ProfileScreenViewModelOutputProtocol {
+	var dataSource: ProfileScreenDataSource.DataSource { get }
+	var sections: Driver<[ProfileScreenDataSource.SectionType]> { get }
 }
 
 protocol ProfileScreenViewModelProtocol {

@@ -14,6 +14,11 @@
 		E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E514D9EF26B8568800647DE9 /* ProfileScreenViewController.storyboard */; };
 		E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9F126B856CC00647DE9 /* ProfileScreenViewModel.swift */; };
 		E514D9F426B856DD00647DE9 /* ProfileScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9F326B856DD00647DE9 /* ProfileScreenViewModelProtocols.swift */; };
+		E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9F726B8840700647DE9 /* HeaderTableViewCell.swift */; };
+		E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E514D9F826B8840700647DE9 /* HeaderTableViewCell.xib */; };
+		E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */; };
+		E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9FE26B8953900647DE9 /* ProfileScreenDataSource.swift */; };
+		E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0026B8966E00647DE9 /* ProfileScreenBuilder.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F6226B0901B005FAC4A /* AppDelegate.swift */; };
@@ -44,6 +49,11 @@
 		E514D9EF26B8568800647DE9 /* ProfileScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileScreenViewController.storyboard; sourceTree = "<group>"; };
 		E514D9F126B856CC00647DE9 /* ProfileScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewModel.swift; sourceTree = "<group>"; };
 		E514D9F326B856DD00647DE9 /* ProfileScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		E514D9F726B8840700647DE9 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E514D9F826B8840700647DE9 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellModelProtocol.swift; sourceTree = "<group>"; };
+		E514D9FE26B8953900647DE9 /* ProfileScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenDataSource.swift; sourceTree = "<group>"; };
+		E514DA0026B8966E00647DE9 /* ProfileScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenBuilder.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E5709F5F26B0901B005FAC4A /* profsoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profsoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +111,7 @@
 				E514D9EA26B8561000647DE9 /* DataSource */,
 				E514D9E926B8560800647DE9 /* ViewModel */,
 				E514D9E826B8560300647DE9 /* View */,
+				E514DA0026B8966E00647DE9 /* ProfileScreenBuilder.swift */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -126,8 +137,34 @@
 		E514D9EA26B8561000647DE9 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E514D9FE26B8953900647DE9 /* ProfileScreenDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		E514D9F526B8837A00647DE9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E514D9F626B8838F00647DE9 /* HeaderCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E514D9F626B8838F00647DE9 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				E514D9F726B8840700647DE9 /* HeaderTableViewCell.swift */,
+				E514D9F826B8840700647DE9 /* HeaderTableViewCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		E514D9FB26B8870A00647DE9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		E5709F5626B0901B005FAC4A = {
@@ -194,6 +231,7 @@
 		E5709F7926B0918E005FAC4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E514D9FB26B8870A00647DE9 /* Configuration */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +331,7 @@
 		E5855FA826B2A99C00E104BE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E514D9F526B8837A00647DE9 /* Cells */,
 				E5855FA926B2A9AD00E104BE /* TextFields */,
 			);
 			path = UI;
@@ -376,6 +415,7 @@
 				E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */,
 				E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
+				E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */,
 				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,11 +482,15 @@
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,
 				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
+				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
 				E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */,
 				E514D9E426B7F2DB00647DE9 /* PrivateFlow.swift in Sources */,
 				E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */,
+				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
 				E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */,
+				E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */,
 				E514D9E626B84F8E00647DE9 /* DashboardFlow.swift in Sources */,
+				E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */,
 				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
