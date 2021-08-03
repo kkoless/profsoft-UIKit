@@ -16,24 +16,29 @@ enum ProfileScreenHeader {
 
 enum ProfileScreenItem {
 	case header(model: HeaderCellModelProtocol)
-	case loyalityCard
+	case certificate(model: CertificateCellModelProtocol)
 	// и другие
 }
 
 final class ProfileScreenDataSource {
 
-	typealias SectionType = SectionModel<ProfileScreenHeader, ProfileScreenItem>
+	typealias SectionType = SectionModel<String, ProfileScreenItem>
 
 	typealias DataSource = RxTableViewSectionedReloadDataSource<SectionType>
 
 	let dataSource = DataSource { dataSource, tableView, indexPath, _ -> UITableViewCell in
 		switch dataSource[indexPath] {
-		case let .header(model: model):
-			return CellBuilder<HeaderTableViewCell>.build(tableView: tableView,
-															   indexPath: indexPath,
-															   model: model)
-		default:
-			return UITableViewCell()
+			case .header(model: let model):
+				return CellBuilder<HeaderTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+			case .certificate(model: let model):
+				return CellBuilder<CertificateTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+				
+			default:
+				return UITableViewCell()
 		}
 	}
 }

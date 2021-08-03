@@ -23,7 +23,7 @@ enum AppStep: Step {
 	case userSkipLogin // Перенаправит на ProfileScreen
 	
 	case dashboard
-	case userProfile
+	case userProfile // (user: User)
 	
 	case none
 }

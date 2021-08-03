@@ -53,8 +53,7 @@ private extension ProfileScreenViewController {
 	
 	func configureTableView() {
 		tableView.register(cellType: HeaderTableViewCell.self)
-		
-		
+		tableView.register(cellType: CertificateTableViewCell.self)
 		
 		tableView.contentInsetAdjustmentBehavior = .never
 		tableView.separatorStyle = .none

@@ -19,6 +19,15 @@
 		E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */; };
 		E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514D9FE26B8953900647DE9 /* ProfileScreenDataSource.swift */; };
 		E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0026B8966E00647DE9 /* ProfileScreenBuilder.swift */; };
+		E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0426B9C56F00647DE9 /* ServerResponse.swift */; };
+		E514DA0B26B9C5DC00647DE9 /* MasterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0A26B9C5DC00647DE9 /* MasterProvider.swift */; };
+		E514DA0E26B9C67100647DE9 /* BaseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0D26B9C67100647DE9 /* BaseMapper.swift */; };
+		E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0F26B9C6BE00647DE9 /* GeneralAPI.swift */; };
+		E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1126B9C75500647DE9 /* APIServiceContainer.swift */; };
+		E514DA1426B9C78D00647DE9 /* MediatorServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1326B9C78D00647DE9 /* MediatorServiceContainer.swift */; };
+		E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */; };
+		E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */; };
+		E514DA1B26B9D83B00647DE9 /* CertificateCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F6226B0901B005FAC4A /* AppDelegate.swift */; };
@@ -54,6 +63,15 @@
 		E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellModelProtocol.swift; sourceTree = "<group>"; };
 		E514D9FE26B8953900647DE9 /* ProfileScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenDataSource.swift; sourceTree = "<group>"; };
 		E514DA0026B8966E00647DE9 /* ProfileScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenBuilder.swift; sourceTree = "<group>"; };
+		E514DA0426B9C56F00647DE9 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		E514DA0A26B9C5DC00647DE9 /* MasterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterProvider.swift; sourceTree = "<group>"; };
+		E514DA0D26B9C67100647DE9 /* BaseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapper.swift; sourceTree = "<group>"; };
+		E514DA0F26B9C6BE00647DE9 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
+		E514DA1126B9C75500647DE9 /* APIServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceContainer.swift; sourceTree = "<group>"; };
+		E514DA1326B9C78D00647DE9 /* MediatorServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorServiceContainer.swift; sourceTree = "<group>"; };
+		E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
+		E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertificateTableViewCell.xib; sourceTree = "<group>"; };
+		E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateCellModelProtocol.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E5709F5F26B0901B005FAC4A /* profsoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profsoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +163,7 @@
 		E514D9F526B8837A00647DE9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E514DA1526B9D78B00647DE9 /* СertificateCell */,
 				E514D9F626B8838F00647DE9 /* HeaderCell */,
 			);
 			path = Cells;
@@ -163,8 +182,65 @@
 			isa = PBXGroup;
 			children = (
 				E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */,
+				E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E514DA0226B9C54500647DE9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E514DA0326B9C55100647DE9 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				E514DA0426B9C56F00647DE9 /* ServerResponse.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		E514DA0626B9C59D00647DE9 /* Mediators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mediators;
+			sourceTree = "<group>";
+		};
+		E514DA0826B9C5B900647DE9 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				E514DA0C26B9C65D00647DE9 /* BaseMapper */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		E514DA0926B9C5BF00647DE9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E514DA0F26B9C6BE00647DE9 /* GeneralAPI.swift */,
+				E514DA0A26B9C5DC00647DE9 /* MasterProvider.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E514DA0C26B9C65D00647DE9 /* BaseMapper */ = {
+			isa = PBXGroup;
+			children = (
+				E514DA0D26B9C67100647DE9 /* BaseMapper.swift */,
+			);
+			path = BaseMapper;
+			sourceTree = "<group>";
+		};
+		E514DA1526B9D78B00647DE9 /* СertificateCell */ = {
+			isa = PBXGroup;
+			children = (
+				E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */,
+				E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */,
+			);
+			path = "СertificateCell";
 			sourceTree = "<group>";
 		};
 		E5709F5626B0901B005FAC4A = {
@@ -189,13 +265,13 @@
 			isa = PBXGroup;
 			children = (
 				E5709F7626B09048005FAC4A /* App */,
-				E5709F7726B090AA005FAC4A /* Resources */,
 				E5709F7B26B091AA005FAC4A /* Router */,
+				E5709F7826B09181005FAC4A /* Modules */,
 				E5709F7C26B091B8005FAC4A /* Components */,
 				E5709F7A26B091A3005FAC4A /* Services */,
 				E5709F7926B0918E005FAC4A /* Models */,
-				E5709F7826B09181005FAC4A /* Modules */,
 				E5709F7D26B091C7005FAC4A /* Helper */,
+				E5709F7726B090AA005FAC4A /* Resources */,
 			);
 			path = profsoft;
 			sourceTree = "<group>";
@@ -221,9 +297,9 @@
 		E5709F7826B09181005FAC4A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E514D9E726B855F600647DE9 /* ProfileScreen */,
-				E5855F9726B1B66400E104BE /* LoginScreen */,
 				E5709F8C26B09E51005FAC4A /* StartScreen */,
+				E5855F9726B1B66400E104BE /* LoginScreen */,
+				E514D9E726B855F600647DE9 /* ProfileScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -232,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				E514D9FB26B8870A00647DE9 /* Configuration */,
+				E514DA0326B9C55100647DE9 /* Server */,
+				E514DA0226B9C54500647DE9 /* Local */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +317,11 @@
 		E5709F7A26B091A3005FAC4A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E514DA0926B9C5BF00647DE9 /* API */,
+				E514DA0826B9C5B900647DE9 /* Mappers */,
+				E514DA0626B9C59D00647DE9 /* Mediators */,
+				E514DA1126B9C75500647DE9 /* APIServiceContainer.swift */,
+				E514DA1326B9C78D00647DE9 /* MediatorServiceContainer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -415,6 +498,7 @@
 				E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */,
 				E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
+				E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */,
 				E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */,
 				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
 			);
@@ -471,26 +555,34 @@
 			files = (
 				E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */,
 				E514D9F426B856DD00647DE9 /* ProfileScreenViewModelProtocols.swift in Sources */,
+				E514DA0B26B9C5DC00647DE9 /* MasterProvider.swift in Sources */,
 				E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */,
 				E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */,
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
+				E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
+				E514DA0E26B9C67100647DE9 /* BaseMapper.swift in Sources */,
+				E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */,
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
 				E514D9EC26B8564000647DE9 /* ProfileScreenViewController.swift in Sources */,
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,
+				E514DA1426B9C78D00647DE9 /* MediatorServiceContainer.swift in Sources */,
 				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
+				E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */,
 				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
 				E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */,
 				E514D9E426B7F2DB00647DE9 /* PrivateFlow.swift in Sources */,
 				E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */,
 				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
+				E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */,
 				E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */,
 				E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */,
 				E514D9E626B84F8E00647DE9 /* DashboardFlow.swift in Sources */,
 				E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */,
+				E514DA1B26B9D83B00647DE9 /* CertificateCellModelProtocol.swift in Sources */,
 				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
