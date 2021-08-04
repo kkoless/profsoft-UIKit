@@ -16,6 +16,7 @@ enum ProfileScreenHeader {
 
 enum ProfileScreenItem {
 	case header(model: HeaderCellModelProtocol)
+	case sectionName
 	case certificate(model: CertificateCellModelProtocol)
 	// и другие
 }
@@ -32,6 +33,10 @@ final class ProfileScreenDataSource {
 				return CellBuilder<HeaderTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,
 															  model: model)
+			case .sectionName:
+				return EmptyCellBuilder<SectionCourcesTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath)
+				
 			case .certificate(model: let model):
 				return CellBuilder<CertificateTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,

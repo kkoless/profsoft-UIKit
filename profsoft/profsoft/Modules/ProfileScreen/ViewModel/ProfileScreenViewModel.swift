@@ -31,7 +31,7 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 	func transform(input: ProfileScreenViewModelInputProtocol) -> ProfileScreenViewModelOutputProtocol {
 		
 		let sections = BehaviorRelay<[SectionType]>(value: [])
-		let mockItems = BehaviorRelay<[Int]>(value: [])
+		let mockItems = BehaviorRelay<[String]>(value: [])
 		
 		input.onAppear
 			.withLatestFrom(mockItems)

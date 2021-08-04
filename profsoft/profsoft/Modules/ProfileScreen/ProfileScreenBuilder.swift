@@ -18,13 +18,16 @@ struct ProfileScreenBuilder {
 
 		let user = ProfileScreenItem.header(model: HeaderCellModel(userInfo: "Кожин Александр Сергеевич".uppercased(), userEmail: "kologram@gmail.com", imageTap: PublishRelay<Void>()))
 		
+		let sectionCources = ProfileScreenItem.sectionName
+		
 		let certificate = ProfileScreenItem.certificate(model: CertificateCellModel(certificateId: "№ 08-09270-7321897"))
 		
 		courcesItems.append(certificate)
 
 		return [
-			SectionType(model: String(), items: [user]),
-			SectionType(model: "Мои курсы", items: courcesItems)
+			SectionType(model: "", items: [user]),
+			SectionType(model: "", items: [sectionCources]),
+			SectionType(model: "Мои курсы".uppercased(), items: courcesItems)
 		]
 	}
 }

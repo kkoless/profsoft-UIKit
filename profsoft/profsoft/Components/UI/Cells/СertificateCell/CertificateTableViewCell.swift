@@ -25,8 +25,7 @@ class CertificateTableViewCell: UITableViewCell, CellConfigurable {
 		super.prepareForReuse()
 		disposeBag = DisposeBag()
 	}
-	
-	
+
 
 	func configureCell(with model: CertificateCellModelProtocol) {
 		disposeBag = DisposeBag()
@@ -48,12 +47,12 @@ private extension CertificateTableViewCell {
 
 	func configureTitleLabel() {
 		titleLabel.textColor = .gray
-		titleLabel.font = titleLabel.font.withSize(15)
+		titleLabel.font = UIFont(name: "Golos", size: 15)
 	}
 	
 	
 	func configureCertificateIdLabel() {
 		certificateIdLabel.textColor = .black
-		certificateIdLabel.font = UIFont.boldSystemFont(ofSize: 15)
+		certificateIdLabel.font = UIFont(name: "Golos", size: 15)
 	}
 }

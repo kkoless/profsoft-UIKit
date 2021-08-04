@@ -127,7 +127,7 @@ private extension LoginScreenViewController {
 	 
 	func configureEnterButton() {
 		enterButton.setTitle("Вход", for: .normal)
-		enterButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 16)
 		enterButton.tintColor = .white
 		
 		enterButton.backgroundColor = .black
@@ -144,7 +144,7 @@ private extension LoginScreenViewController {
 		passwordTextField.placeholder = "Пароль"
 		passwordTextField.isSecureTextEntry = true
 		
-		passwordTextField.font = passwordTextField.font?.withSize(18)
+		passwordTextField.font = UIFont(name: "Golos", size: 16)
 		
 		passwordTextField.layer.borderColor = UIColor.black.cgColor
 		passwordTextField.layer.borderWidth = 1.5
@@ -168,7 +168,7 @@ private extension LoginScreenViewController {
 		
 		emailTextField.placeholder = "Email"
 		
-		emailTextField.font = emailTextField.font?.withSize(18)
+		emailTextField.font = UIFont(name: "Golos", size: 16)
 		
 		emailTextField.layer.borderColor = UIColor.black.cgColor
 		emailTextField.layer.borderWidth = 1.5
@@ -189,13 +189,13 @@ private extension LoginScreenViewController {
 	}
 	
 	func configurePasswordErrorLabel() {
-		passwordErrorLabel.font = passwordErrorLabel.font.withSize(13)
+		passwordErrorLabel.font = UIFont(name: "Golos", size: 11)
 		passwordErrorLabel.textColor = .red
 		passwordErrorLabel.text = ""
 	}
 	
 	func configureEmailErrorLabel() {
-		emailErrorLabel.font = emailErrorLabel.font.withSize(13)
+		emailErrorLabel.font = UIFont(name: "Golos", size: 11)
 		emailErrorLabel.textColor = .red
 		emailErrorLabel.text = ""
 	}

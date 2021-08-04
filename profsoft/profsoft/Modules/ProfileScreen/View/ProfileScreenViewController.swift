@@ -53,6 +53,7 @@ private extension ProfileScreenViewController {
 	
 	func configureTableView() {
 		tableView.register(cellType: HeaderTableViewCell.self)
+		tableView.register(cellType: SectionCourcesTableViewCell.self)
 		tableView.register(cellType: CertificateTableViewCell.self)
 		
 		tableView.contentInsetAdjustmentBehavior = .never
@@ -79,6 +80,6 @@ private extension ProfileScreenViewController {
 	
 	func bindTableView() {
 		output.sections.drive(tableView.rx.items(dataSource: output.dataSource)).disposed(by: disposeBag)
+			
 	}
 }
-

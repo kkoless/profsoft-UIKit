@@ -53,7 +53,7 @@ private extension HeaderTableViewCell {
 	}
 
 	func configureUserInfoLabel() {
-		userInfoLabel.font = UIFont.boldSystemFont(ofSize: 18)
+		userInfoLabel.font = UIFont(name: "Golos", size: 15)
 		userInfoLabel.textColor = .white
 		
 		userInfoLabel.numberOfLines = 0
@@ -65,7 +65,7 @@ private extension HeaderTableViewCell {
 	
 	
 	func configureUserEmailLabel() {
-		userEmailLabel.font = userEmailLabel.font.withSize(15)
+		userEmailLabel.font = UIFont(name: "Golos", size: 12)
 		userEmailLabel.textColor = .white
 	}
 }
