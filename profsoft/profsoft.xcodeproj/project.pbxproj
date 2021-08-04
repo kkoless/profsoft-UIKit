@@ -33,6 +33,15 @@
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
+		E56FAC9726BB3D1300A9689A /* DirectionCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FAC9626BB3D1300A9689A /* DirectionCellModelProtocol.swift */; };
+		E56FAC9B26BB3D9B00A9689A /* DirectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FAC9926BB3D9B00A9689A /* DirectionTableViewCell.swift */; };
+		E56FAC9C26BB3D9B00A9689A /* DirectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9A26BB3D9B00A9689A /* DirectionTableViewCell.xib */; };
+		E56FAC9E26BB408800A9689A /* EducationFormCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FAC9D26BB408800A9689A /* EducationFormCellModelProtocol.swift */; };
+		E56FACA226BB40DD00A9689A /* EducationFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FACA026BB40DD00A9689A /* EducationFormTableViewCell.swift */; };
+		E56FACA326BB40DD00A9689A /* EducationFormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56FACA126BB40DD00A9689A /* EducationFormTableViewCell.xib */; };
+		E56FACA526BB47A800A9689A /* StudyPeriodCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FACA426BB47A800A9689A /* StudyPeriodCellModelProtocol.swift */; };
+		E56FACA926BB484800A9689A /* StudyPeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56FACA726BB484800A9689A /* StudyPeriodTableViewCell.swift */; };
+		E56FACAA26BB484800A9689A /* StudyPeriodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56FACA826BB484800A9689A /* StudyPeriodTableViewCell.xib */; };
 		E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5709F6226B0901B005FAC4A /* AppDelegate.swift */; };
 		E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6B26B0901C005FAC4A /* Assets.xcassets */; };
 		E5709F6F26B0901C005FAC4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5709F6D26B0901C005FAC4A /* LaunchScreen.storyboard */; };
@@ -80,6 +89,15 @@
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
+		E56FAC9626BB3D1300A9689A /* DirectionCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionCellModelProtocol.swift; sourceTree = "<group>"; };
+		E56FAC9926BB3D9B00A9689A /* DirectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionTableViewCell.swift; sourceTree = "<group>"; };
+		E56FAC9A26BB3D9B00A9689A /* DirectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectionTableViewCell.xib; sourceTree = "<group>"; };
+		E56FAC9D26BB408800A9689A /* EducationFormCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationFormCellModelProtocol.swift; sourceTree = "<group>"; };
+		E56FACA026BB40DD00A9689A /* EducationFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationFormTableViewCell.swift; sourceTree = "<group>"; };
+		E56FACA126BB40DD00A9689A /* EducationFormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationFormTableViewCell.xib; sourceTree = "<group>"; };
+		E56FACA426BB47A800A9689A /* StudyPeriodCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPeriodCellModelProtocol.swift; sourceTree = "<group>"; };
+		E56FACA726BB484800A9689A /* StudyPeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPeriodTableViewCell.swift; sourceTree = "<group>"; };
+		E56FACA826BB484800A9689A /* StudyPeriodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyPeriodTableViewCell.xib; sourceTree = "<group>"; };
 		E5709F5F26B0901B005FAC4A /* profsoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = profsoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5709F6226B0901B005FAC4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5709F6B26B0901C005FAC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,8 +196,11 @@
 		E514D9F526B8837A00647DE9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E50ADC1926BACD77003BEE66 /* SectionCources */,
+				E56FACA626BB483200A9689A /* StudyPeriodCell */,
+				E56FAC9F26BB40BE00A9689A /* EducationFormCell */,
+				E56FAC9826BB3D8500A9689A /* DirectionCell */,
 				E514DA1526B9D78B00647DE9 /* СertificateCell */,
+				E50ADC1926BACD77003BEE66 /* SectionCources */,
 				E514D9F626B8838F00647DE9 /* HeaderCell */,
 			);
 			path = Cells;
@@ -199,6 +220,9 @@
 			children = (
 				E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */,
 				E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */,
+				E56FAC9626BB3D1300A9689A /* DirectionCellModelProtocol.swift */,
+				E56FAC9D26BB408800A9689A /* EducationFormCellModelProtocol.swift */,
+				E56FACA426BB47A800A9689A /* StudyPeriodCellModelProtocol.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -265,6 +289,33 @@
 				E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		E56FAC9826BB3D8500A9689A /* DirectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56FAC9926BB3D9B00A9689A /* DirectionTableViewCell.swift */,
+				E56FAC9A26BB3D9B00A9689A /* DirectionTableViewCell.xib */,
+			);
+			path = DirectionCell;
+			sourceTree = "<group>";
+		};
+		E56FAC9F26BB40BE00A9689A /* EducationFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56FACA026BB40DD00A9689A /* EducationFormTableViewCell.swift */,
+				E56FACA126BB40DD00A9689A /* EducationFormTableViewCell.xib */,
+			);
+			path = EducationFormCell;
+			sourceTree = "<group>";
+		};
+		E56FACA626BB483200A9689A /* StudyPeriodCell */ = {
+			isa = PBXGroup;
+			children = (
+				E56FACA726BB484800A9689A /* StudyPeriodTableViewCell.swift */,
+				E56FACA826BB484800A9689A /* StudyPeriodTableViewCell.xib */,
+			);
+			path = StudyPeriodCell;
 			sourceTree = "<group>";
 		};
 		E5709F5626B0901B005FAC4A = {
@@ -527,7 +578,10 @@
 				E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */,
 				E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */,
 				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
+				E56FACAA26BB484800A9689A /* StudyPeriodTableViewCell.xib in Resources */,
 				E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */,
+				E56FAC9C26BB3D9B00A9689A /* DirectionTableViewCell.xib in Resources */,
+				E56FACA326BB40DD00A9689A /* EducationFormTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,17 +642,22 @@
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
 				E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
+				E56FACA226BB40DD00A9689A /* EducationFormTableViewCell.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
 				E514DA0E26B9C67100647DE9 /* BaseMapper.swift in Sources */,
 				E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */,
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
+				E56FACA926BB484800A9689A /* StudyPeriodTableViewCell.swift in Sources */,
 				E514D9EC26B8564000647DE9 /* ProfileScreenViewController.swift in Sources */,
+				E56FACA526BB47A800A9689A /* StudyPeriodCellModelProtocol.swift in Sources */,
+				E56FAC9726BB3D1300A9689A /* DirectionCellModelProtocol.swift in Sources */,
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,
 				E514DA1426B9C78D00647DE9 /* MediatorServiceContainer.swift in Sources */,
 				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
 				E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */,
+				E56FAC9E26BB408800A9689A /* EducationFormCellModelProtocol.swift in Sources */,
 				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
 				E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */,
 				E514D9E426B7F2DB00647DE9 /* PrivateFlow.swift in Sources */,
@@ -606,6 +665,7 @@
 				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
 				E50ADC1C26BACE00003BEE66 /* SectionCourcesTableViewCell.swift in Sources */,
 				E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */,
+				E56FAC9B26BB3D9B00A9689A /* DirectionTableViewCell.swift in Sources */,
 				E5855FA526B1CA6700E104BE /* LoginScreenViewController.swift in Sources */,
 				E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */,
 				E514D9E626B84F8E00647DE9 /* DashboardFlow.swift in Sources */,

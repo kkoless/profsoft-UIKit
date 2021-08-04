@@ -18,6 +18,9 @@ enum ProfileScreenItem {
 	case header(model: HeaderCellModelProtocol)
 	case sectionName
 	case certificate(model: CertificateCellModelProtocol)
+	case direction(model: DirectionCellModelProtocol)
+	case educationForm(model: EducationFormCellModelProtocol)
+	case studyPeriod(model: StudyPeriodCellModelProtocol)
 	// и другие
 }
 
@@ -39,6 +42,18 @@ final class ProfileScreenDataSource {
 				
 			case .certificate(model: let model):
 				return CellBuilder<CertificateTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+			case .direction(model: let model):
+				return CellBuilder<DirectionTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+			case .educationForm(model: let model):
+				return CellBuilder<EducationFormTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+			case .studyPeriod(model: let model):
+				return CellBuilder<StudyPeriodTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,
 															  model: model)
 				

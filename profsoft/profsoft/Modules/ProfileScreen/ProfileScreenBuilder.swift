@@ -22,7 +22,16 @@ struct ProfileScreenBuilder {
 		
 		let certificate = ProfileScreenItem.certificate(model: CertificateCellModel(certificateId: "№ 08-09270-7321897"))
 		
+		let direction = ProfileScreenItem.direction(model: DirectionCellModel(directionName: "Design"))
+		
+		let educationForm = ProfileScreenItem.educationForm(model: EducationFormCellModel(educationName: "очная"))
+		
+		let studyPeriod = ProfileScreenItem.studyPeriod(model: StudyPeriodCellModel(startPeriod: "01.07.2021", endPeriod: "30.08.2021"))
+		
 		courcesItems.append(certificate)
+		courcesItems.append(direction)
+		courcesItems.append(educationForm)
+		courcesItems.append(studyPeriod)
 
 		return [
 			SectionType(model: "", items: [user]),
