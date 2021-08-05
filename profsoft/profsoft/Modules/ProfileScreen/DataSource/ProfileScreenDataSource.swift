@@ -21,6 +21,7 @@ enum ProfileScreenItem {
 	case direction(model: DirectionCellModelProtocol)
 	case educationForm(model: EducationFormCellModelProtocol)
 	case studyPeriod(model: StudyPeriodCellModelProtocol)
+	case showMore
 	// и другие
 }
 
@@ -56,6 +57,9 @@ final class ProfileScreenDataSource {
 				return CellBuilder<StudyPeriodTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,
 															  model: model)
+			case .showMore:
+				return EmptyCellBuilder<ShowMoreTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath)
 				
 			default:
 				return UITableViewCell()

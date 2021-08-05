@@ -28,10 +28,13 @@ struct ProfileScreenBuilder {
 		
 		let studyPeriod = ProfileScreenItem.studyPeriod(model: StudyPeriodCellModel(startPeriod: "01.07.2021", endPeriod: "30.08.2021"))
 		
+		let showMore = ProfileScreenItem.showMore
+		
 		courcesItems.append(certificate)
 		courcesItems.append(direction)
 		courcesItems.append(educationForm)
 		courcesItems.append(studyPeriod)
+		courcesItems.append(showMore)
 
 		return [
 			SectionType(model: "", items: [user]),

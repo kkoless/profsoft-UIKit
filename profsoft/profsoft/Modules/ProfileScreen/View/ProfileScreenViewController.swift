@@ -58,6 +58,7 @@ private extension ProfileScreenViewController {
 		tableView.register(cellType: DirectionTableViewCell.self)
 		tableView.register(cellType: EducationFormTableViewCell.self)
 		tableView.register(cellType: StudyPeriodTableViewCell.self)
+		tableView.register(cellType: ShowMoreTableViewCell.self)
 		
 		tableView.contentInsetAdjustmentBehavior = .never
 		tableView.separatorStyle = .none

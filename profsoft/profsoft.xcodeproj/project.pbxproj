@@ -30,6 +30,8 @@
 		E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */; };
 		E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */; };
 		E514DA1B26B9D83B00647DE9 /* CertificateCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */; };
+		E521C2B926BBE7D400381EC3 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2B726BBE7D400381EC3 /* ShowMoreTableViewCell.swift */; };
+		E521C2BA26BBE7D400381EC3 /* ShowMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2B826BBE7D400381EC3 /* ShowMoreTableViewCell.xib */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -86,6 +88,8 @@
 		E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
 		E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertificateTableViewCell.xib; sourceTree = "<group>"; };
 		E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateCellModelProtocol.swift; sourceTree = "<group>"; };
+		E521C2B726BBE7D400381EC3 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
+		E521C2B826BBE7D400381EC3 /* ShowMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowMoreTableViewCell.xib; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		E514D9F526B8837A00647DE9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E521C2B626BBE7B700381EC3 /* ShowMoreCell */,
 				E56FACA626BB483200A9689A /* StudyPeriodCell */,
 				E56FAC9F26BB40BE00A9689A /* EducationFormCell */,
 				E56FAC9826BB3D8500A9689A /* DirectionCell */,
@@ -281,6 +286,15 @@
 				E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */,
 			);
 			path = "СertificateCell";
+			sourceTree = "<group>";
+		};
+		E521C2B626BBE7B700381EC3 /* ShowMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2B726BBE7D400381EC3 /* ShowMoreTableViewCell.swift */,
+				E521C2B826BBE7D400381EC3 /* ShowMoreTableViewCell.xib */,
+			);
+			path = ShowMoreCell;
 			sourceTree = "<group>";
 		};
 		E56FAC9126BAD1EE00A9689A /* Font */ = {
@@ -579,6 +593,7 @@
 				E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */,
 				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
 				E56FACAA26BB484800A9689A /* StudyPeriodTableViewCell.xib in Resources */,
+				E521C2BA26BBE7D400381EC3 /* ShowMoreTableViewCell.xib in Resources */,
 				E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */,
 				E56FAC9C26BB3D9B00A9689A /* DirectionTableViewCell.xib in Resources */,
 				E56FACA326BB40DD00A9689A /* EducationFormTableViewCell.xib in Resources */,
@@ -663,6 +678,7 @@
 				E514D9E426B7F2DB00647DE9 /* PrivateFlow.swift in Sources */,
 				E5709F9526B09FDE005FAC4A /* StartScreenViewModel.swift in Sources */,
 				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
+				E521C2B926BBE7D400381EC3 /* ShowMoreTableViewCell.swift in Sources */,
 				E50ADC1C26BACE00003BEE66 /* SectionCourcesTableViewCell.swift in Sources */,
 				E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */,
 				E56FAC9B26BB3D9B00A9689A /* DirectionTableViewCell.swift in Sources */,
