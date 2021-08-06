@@ -38,17 +38,17 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 		
 		input.onAppear
 			.withLatestFrom(mockItems)
-			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore) }
+			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore, showTapLess: showTapLess) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
 		showTapMore.asObservable()
-			.map{ _ in ProfileScreenBuilder.extendedBuild(showTapLess: showTapLess) }
+			.map{ _ in ProfileScreenBuilder.extendedBuild(showTapLess: showTapLess, showTapMore: showTapMore) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
 		showTapLess.asObservable()
-			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore) }
+			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore, showTapLess: showTapLess) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
