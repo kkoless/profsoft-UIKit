@@ -45,6 +45,7 @@ private extension ProfileScreenViewController {
 	func configureUI(){
 		configureViews()
 		configureTableView()
+		
 	}
 	
 	func configureViews() {
@@ -59,6 +60,8 @@ private extension ProfileScreenViewController {
 		tableView.register(cellType: EducationFormTableViewCell.self)
 		tableView.register(cellType: StudyPeriodTableViewCell.self)
 		tableView.register(cellType: ShowMoreTableViewCell.self)
+		tableView.register(cellType: StudyTableViewCell.self)
+		tableView.register(cellType: TeacherTableViewCell.self)
 		
 		tableView.contentInsetAdjustmentBehavior = .never
 		tableView.separatorStyle = .none

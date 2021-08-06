@@ -40,23 +40,21 @@ extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 				if data.isEmpty || !validUserEmailData(data: data){
 					return .just(false)
 				}
-				
+
 				return .just(true)
 			}
-		
+
 		let validPasswordData = input.passwordTextField.rx.text.orEmpty
 			.flatMap{ data -> Observable<Bool> in
 				if data.isEmpty || !validUserPasswordData(data: data){
 					return .just(false)
 				}
-				
+
 				return .just(true)
 			}
-				
 		
 		input.enterButton.rx.tap
 			.map{ _ in
-				
 				let userEmail = input.emailTextField.text!
 				let userPassword = input.passwordTextField.text!
 				
@@ -152,4 +150,3 @@ private extension LoginScreenViewModel {
 	}
 	
 }
-

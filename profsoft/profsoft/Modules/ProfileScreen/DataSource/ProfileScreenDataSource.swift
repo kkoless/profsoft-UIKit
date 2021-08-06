@@ -11,6 +11,7 @@ import UIKit
 import RxCocoa
 
 enum ProfileScreenHeader {
+	case none
 	case courses
 }
 
@@ -21,7 +22,9 @@ enum ProfileScreenItem {
 	case direction(model: DirectionCellModelProtocol)
 	case educationForm(model: EducationFormCellModelProtocol)
 	case studyPeriod(model: StudyPeriodCellModelProtocol)
-	case showMore
+	case showMore(model: ShowMoreCellModelProtocol)
+	case study(model: StudyCellModelProtocol)
+	case teacher(model: TeacherCellModelProtocol)
 	// и другие
 }
 
@@ -57,9 +60,19 @@ final class ProfileScreenDataSource {
 				return CellBuilder<StudyPeriodTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,
 															  model: model)
-			case .showMore:
-				return EmptyCellBuilder<ShowMoreTableViewCell>.build(tableView: tableView,
-															  indexPath: indexPath)
+			case .showMore(model: let model):
+				return CellBuilder<ShowMoreTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+												
+			case .study(model: let model):
+				return CellBuilder<StudyTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
+			case .teacher(model: let model):
+				return CellBuilder<TeacherTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
 				
 			default:
 				return UITableViewCell()

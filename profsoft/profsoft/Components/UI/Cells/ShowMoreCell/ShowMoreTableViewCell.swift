@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Reusable
 
-class ShowMoreTableViewCell: UITableViewCell, NibReusable {
+class ShowMoreTableViewCell: UITableViewCell, CellConfigurable {
 	
 	private var disposeBag = DisposeBag()
 	
@@ -25,6 +25,15 @@ class ShowMoreTableViewCell: UITableViewCell, NibReusable {
 	override func prepareForReuse() {
 		super.prepareForReuse()
 		disposeBag = DisposeBag()
+	}
+	
+	func configureCell(with model: ShowMoreCellModelProtocol) {
+		disposeBag = DisposeBag()
+		
+		showMoreButton.rx.tap
+			.bind(to: model.tapToMore)
+			.disposed(by: disposeBag)
+		
 	}
 	
 }
