@@ -25,5 +25,10 @@ enum AppStep: Step {
 	case dashboard
 	case userProfile // (user: User)
 	
+	
+	
+	case general
+	case search
+	
 	case none
 }

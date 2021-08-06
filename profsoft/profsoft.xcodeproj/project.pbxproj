@@ -27,9 +27,9 @@
 		E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA0F26B9C6BE00647DE9 /* GeneralAPI.swift */; };
 		E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1126B9C75500647DE9 /* APIServiceContainer.swift */; };
 		E514DA1426B9C78D00647DE9 /* MediatorServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1326B9C78D00647DE9 /* MediatorServiceContainer.swift */; };
-		E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */; };
-		E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */; };
-		E514DA1B26B9D83B00647DE9 /* CertificateCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */; };
+		E514DA1826B9D7B300647DE9 /* CertificateNumbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1626B9D7B300647DE9 /* CertificateNumbTableViewCell.swift */; };
+		E514DA1926B9D7B300647DE9 /* CertificateNumbTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E514DA1726B9D7B300647DE9 /* CertificateNumbTableViewCell.xib */; };
+		E514DA1B26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514DA1A26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift */; };
 		E521C2B926BBE7D400381EC3 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2B726BBE7D400381EC3 /* ShowMoreTableViewCell.swift */; };
 		E521C2BA26BBE7D400381EC3 /* ShowMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2B826BBE7D400381EC3 /* ShowMoreTableViewCell.xib */; };
 		E521C2BE26BC74EF00381EC3 /* StudyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2BC26BC74EF00381EC3 /* StudyTableViewCell.swift */; };
@@ -39,6 +39,12 @@
 		E521C2C726BD4D9300381EC3 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2C526BD4D9300381EC3 /* TeacherTableViewCell.swift */; };
 		E521C2C826BD4D9300381EC3 /* TeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2C626BD4D9300381EC3 /* TeacherTableViewCell.xib */; };
 		E521C2CA26BD4DED00381EC3 /* TeacherCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2C926BD4DED00381EC3 /* TeacherCellModelProtocol.swift */; };
+		E521C2D026BDD5BC00381EC3 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2CE26BDD5BC00381EC3 /* CertificateTableViewCell.swift */; };
+		E521C2D126BDD5BC00381EC3 /* CertificateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2CF26BDD5BC00381EC3 /* CertificateTableViewCell.xib */; };
+		E521C2D326BDD8D500381EC3 /* GeneralFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2D226BDD8D500381EC3 /* GeneralFlow.swift */; };
+		E521C2D526BDD8DD00381EC3 /* SearchFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */; };
+		E521C2D926BDDC0A00381EC3 /* ShareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2D726BDDC0A00381EC3 /* ShareTableViewCell.swift */; };
+		E521C2DA26BDDC0A00381EC3 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -92,9 +98,9 @@
 		E514DA0F26B9C6BE00647DE9 /* GeneralAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPI.swift; sourceTree = "<group>"; };
 		E514DA1126B9C75500647DE9 /* APIServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceContainer.swift; sourceTree = "<group>"; };
 		E514DA1326B9C78D00647DE9 /* MediatorServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediatorServiceContainer.swift; sourceTree = "<group>"; };
-		E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
-		E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertificateTableViewCell.xib; sourceTree = "<group>"; };
-		E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateCellModelProtocol.swift; sourceTree = "<group>"; };
+		E514DA1626B9D7B300647DE9 /* CertificateNumbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateNumbTableViewCell.swift; sourceTree = "<group>"; };
+		E514DA1726B9D7B300647DE9 /* CertificateNumbTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertificateNumbTableViewCell.xib; sourceTree = "<group>"; };
+		E514DA1A26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateNumbCellModelProtocol.swift; sourceTree = "<group>"; };
 		E521C2B726BBE7D400381EC3 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
 		E521C2B826BBE7D400381EC3 /* ShowMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowMoreTableViewCell.xib; sourceTree = "<group>"; };
 		E521C2BC26BC74EF00381EC3 /* StudyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +110,12 @@
 		E521C2C526BD4D9300381EC3 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		E521C2C626BD4D9300381EC3 /* TeacherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherTableViewCell.xib; sourceTree = "<group>"; };
 		E521C2C926BD4DED00381EC3 /* TeacherCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCellModelProtocol.swift; sourceTree = "<group>"; };
+		E521C2CE26BDD5BC00381EC3 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
+		E521C2CF26BDD5BC00381EC3 /* CertificateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertificateTableViewCell.xib; sourceTree = "<group>"; };
+		E521C2D226BDD8D500381EC3 /* GeneralFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFlow.swift; sourceTree = "<group>"; };
+		E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlow.swift; sourceTree = "<group>"; };
+		E521C2D726BDDC0A00381EC3 /* ShareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTableViewCell.swift; sourceTree = "<group>"; };
+		E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -214,13 +226,15 @@
 		E514D9F526B8837A00647DE9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E521C2D626BDDBF800381EC3 /* ShareCell */,
+				E521C2CD26BDD50300381EC3 /* CertificateCell */,
 				E521C2C426BD4D8200381EC3 /* TeacherCell */,
 				E521C2BB26BC74D500381EC3 /* StudyCell */,
 				E521C2B626BBE7B700381EC3 /* ShowMoreCell */,
 				E56FACA626BB483200A9689A /* StudyPeriodCell */,
 				E56FAC9F26BB40BE00A9689A /* EducationFormCell */,
 				E56FAC9826BB3D8500A9689A /* DirectionCell */,
-				E514DA1526B9D78B00647DE9 /* СertificateCell */,
+				E514DA1526B9D78B00647DE9 /* СertificateNumbCell */,
 				E50ADC1926BACD77003BEE66 /* SectionCources */,
 				E514D9F626B8838F00647DE9 /* HeaderCell */,
 			);
@@ -240,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E514D9FC26B8872A00647DE9 /* HeaderCellModelProtocol.swift */,
-				E514DA1A26B9D83B00647DE9 /* CertificateCellModelProtocol.swift */,
+				E514DA1A26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift */,
 				E56FAC9626BB3D1300A9689A /* DirectionCellModelProtocol.swift */,
 				E56FAC9D26BB408800A9689A /* EducationFormCellModelProtocol.swift */,
 				E56FACA426BB47A800A9689A /* StudyPeriodCellModelProtocol.swift */,
@@ -298,13 +312,13 @@
 			path = BaseMapper;
 			sourceTree = "<group>";
 		};
-		E514DA1526B9D78B00647DE9 /* СertificateCell */ = {
+		E514DA1526B9D78B00647DE9 /* СertificateNumbCell */ = {
 			isa = PBXGroup;
 			children = (
-				E514DA1626B9D7B300647DE9 /* CertificateTableViewCell.swift */,
-				E514DA1726B9D7B300647DE9 /* CertificateTableViewCell.xib */,
+				E514DA1626B9D7B300647DE9 /* CertificateNumbTableViewCell.swift */,
+				E514DA1726B9D7B300647DE9 /* CertificateNumbTableViewCell.xib */,
 			);
-			path = "СertificateCell";
+			path = "СertificateNumbCell";
 			sourceTree = "<group>";
 		};
 		E521C2B626BBE7B700381EC3 /* ShowMoreCell */ = {
@@ -332,6 +346,24 @@
 				E521C2C626BD4D9300381EC3 /* TeacherTableViewCell.xib */,
 			);
 			path = TeacherCell;
+			sourceTree = "<group>";
+		};
+		E521C2CD26BDD50300381EC3 /* CertificateCell */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2CE26BDD5BC00381EC3 /* CertificateTableViewCell.swift */,
+				E521C2CF26BDD5BC00381EC3 /* CertificateTableViewCell.xib */,
+			);
+			path = CertificateCell;
+			sourceTree = "<group>";
+		};
+		E521C2D626BDDBF800381EC3 /* ShareCell */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2D726BDDC0A00381EC3 /* ShareTableViewCell.swift */,
+				E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */,
+			);
+			path = ShareCell;
 			sourceTree = "<group>";
 		};
 		E56FAC9126BAD1EE00A9689A /* Font */ = {
@@ -461,6 +493,8 @@
 				E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */,
 				E514D9E526B84F8E00647DE9 /* DashboardFlow.swift */,
 				E514D9E326B7F2DB00647DE9 /* PrivateFlow.swift */,
+				E521C2D226BDD8D500381EC3 /* GeneralFlow.swift */,
+				E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -624,11 +658,13 @@
 				E5709F6F26B0901C005FAC4A /* LaunchScreen.storyboard in Resources */,
 				E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */,
 				E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */,
+				E521C2D126BDD5BC00381EC3 /* CertificateTableViewCell.xib in Resources */,
 				E521C2BF26BC74EF00381EC3 /* StudyTableViewCell.xib in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
 				E50ADC1D26BACE00003BEE66 /* SectionCourcesTableViewCell.xib in Resources */,
+				E521C2DA26BDDC0A00381EC3 /* ShareTableViewCell.xib in Resources */,
 				E521C2C826BD4D9300381EC3 /* TeacherTableViewCell.xib in Resources */,
-				E514DA1926B9D7B300647DE9 /* CertificateTableViewCell.xib in Resources */,
+				E514DA1926B9D7B300647DE9 /* CertificateNumbTableViewCell.xib in Resources */,
 				E514D9FA26B8840700647DE9 /* HeaderTableViewCell.xib in Resources */,
 				E5855FA726B1CB9B00E104BE /* LoginScreenViewController.storyboard in Resources */,
 				E56FACAA26BB484800A9689A /* StudyPeriodTableViewCell.xib in Resources */,
@@ -697,15 +733,17 @@
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
 				E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
+				E521C2D926BDDC0A00381EC3 /* ShareTableViewCell.swift in Sources */,
 				E56FACA226BB40DD00A9689A /* EducationFormTableViewCell.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
 				E514DA0E26B9C67100647DE9 /* BaseMapper.swift in Sources */,
-				E514DA1826B9D7B300647DE9 /* CertificateTableViewCell.swift in Sources */,
+				E514DA1826B9D7B300647DE9 /* CertificateNumbTableViewCell.swift in Sources */,
 				E521C2C326BC824300381EC3 /* ShowMoreCellModelProtocol.swift in Sources */,
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
 				E56FACA926BB484800A9689A /* StudyPeriodTableViewCell.swift in Sources */,
 				E521C2BE26BC74EF00381EC3 /* StudyTableViewCell.swift in Sources */,
+				E521C2D326BDD8D500381EC3 /* GeneralFlow.swift in Sources */,
 				E514D9EC26B8564000647DE9 /* ProfileScreenViewController.swift in Sources */,
 				E56FACA526BB47A800A9689A /* StudyPeriodCellModelProtocol.swift in Sources */,
 				E56FAC9726BB3D1300A9689A /* DirectionCellModelProtocol.swift in Sources */,
@@ -714,6 +752,8 @@
 				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
 				E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */,
+				E521C2D526BDD8DD00381EC3 /* SearchFlow.swift in Sources */,
+				E521C2D026BDD5BC00381EC3 /* CertificateTableViewCell.swift in Sources */,
 				E56FAC9E26BB408800A9689A /* EducationFormCellModelProtocol.swift in Sources */,
 				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
 				E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */,
@@ -730,7 +770,7 @@
 				E514DA0126B8966E00647DE9 /* ProfileScreenBuilder.swift in Sources */,
 				E514D9E626B84F8E00647DE9 /* DashboardFlow.swift in Sources */,
 				E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */,
-				E514DA1B26B9D83B00647DE9 /* CertificateCellModelProtocol.swift in Sources */,
+				E514DA1B26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift in Sources */,
 				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

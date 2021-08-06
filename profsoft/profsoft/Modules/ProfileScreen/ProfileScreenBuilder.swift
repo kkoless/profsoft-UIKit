@@ -21,7 +21,7 @@ struct ProfileScreenBuilder {
 		
 		let sectionCources = ProfileScreenItem.sectionName
 		
-		let certificate = ProfileScreenItem.certificate(model: CertificateCellModel(certificateId: "№ 08-09270-7321897"))
+		let certificateNumb = ProfileScreenItem.certificateNumb(model: CertificateNumbCellModel(certificateId: "№ 08-09270-7321897"))
 		
 		let direction = ProfileScreenItem.direction(model: DirectionCellModel(directionName: "Design"))
 		
@@ -31,7 +31,7 @@ struct ProfileScreenBuilder {
 		
 		let showMore = ProfileScreenItem.showMore(model: ShowMoreCellModel(tapToMore: showTapMore))
 		
-		courcesItems.append(certificate)
+		courcesItems.append(certificateNumb)
 		courcesItems.append(direction)
 		courcesItems.append(educationForm)
 		courcesItems.append(studyPeriod)
@@ -52,7 +52,7 @@ struct ProfileScreenBuilder {
 		
 		let sectionCources = ProfileScreenItem.sectionName
 		
-		let certificate = ProfileScreenItem.certificate(model: CertificateCellModel(certificateId: "№ 08-09270-7321897"))
+		let certificateNumb = ProfileScreenItem.certificateNumb(model: CertificateNumbCellModel(certificateId: "№ 08-09270-7321897"))
 		
 		let direction = ProfileScreenItem.direction(model: DirectionCellModel(directionName: "Design"))
 		
@@ -64,12 +64,18 @@ struct ProfileScreenBuilder {
 		
 		let teacher = ProfileScreenItem.teacher(model: TeacherCellModel(teacherName: "Щелкунова Юлия Сергеевна"))
 		
-		courcesItems.append(certificate)
+		let certificate = ProfileScreenItem.certificate
+		
+		let share = ProfileScreenItem.share
+		
+		courcesItems.append(certificateNumb)
 		courcesItems.append(direction)
 		courcesItems.append(educationForm)
 		courcesItems.append(studyPeriod)
 		courcesItems.append(studyDescription)
 		courcesItems.append(teacher)
+		courcesItems.append(certificate)
+		courcesItems.append(share)
 
 		return [
 			SectionType(model: "", items: [user]),

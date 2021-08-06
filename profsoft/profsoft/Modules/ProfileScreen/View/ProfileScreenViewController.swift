@@ -55,13 +55,15 @@ private extension ProfileScreenViewController {
 	func configureTableView() {
 		tableView.register(cellType: HeaderTableViewCell.self)
 		tableView.register(cellType: SectionCourcesTableViewCell.self)
-		tableView.register(cellType: CertificateTableViewCell.self)
+		tableView.register(cellType: CertificateNumbTableViewCell.self)
 		tableView.register(cellType: DirectionTableViewCell.self)
 		tableView.register(cellType: EducationFormTableViewCell.self)
 		tableView.register(cellType: StudyPeriodTableViewCell.self)
 		tableView.register(cellType: ShowMoreTableViewCell.self)
 		tableView.register(cellType: StudyTableViewCell.self)
 		tableView.register(cellType: TeacherTableViewCell.self)
+		tableView.register(cellType: CertificateTableViewCell.self)
+		tableView.register(cellType: ShareTableViewCell.self)
 		
 		tableView.contentInsetAdjustmentBehavior = .never
 		tableView.separatorStyle = .none

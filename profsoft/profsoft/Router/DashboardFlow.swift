@@ -34,11 +34,15 @@ final class DashboardFlow: Flow {
 	//private let mediatorContainer: MediatorServiceContainer
 
 	private let privateFlow: PrivateFlow
+	private let searchFlow: SearchFlow
+	private let generalFlow: GeneralFlow
 
 	init() {
 		//self.serviceContainer = serviceContainer
 		//self.mediatorContainer = mediatorContainer
 		self.privateFlow = PrivateFlow()
+		self.searchFlow = SearchFlow()
+		self.generalFlow = GeneralFlow()
 	}
 
 	deinit {
@@ -58,20 +62,33 @@ final class DashboardFlow: Flow {
 
 	private func navigateToDashboard() -> FlowContributors {
 		
-		Flows.use(privateFlow,
-				  when: .ready) { [unowned self] (root1: UINC) in
+		Flows.use(generalFlow,
+				  searchFlow,
+				  privateFlow,
+				  when: .ready) {
+			[unowned self] root1, root2, root3 in
 			
-			let tabBarItem1 = UITabBarItem(title: "Профиль",
+			let tabBarItem1 = UITabBarItem(title: "",
+										   image: UIImage(named: "home"),
+										   selectedImage: UIImage(named: "home"))
+			let tabBarItem2 = UITabBarItem(title: "",
+										   image: UIImage(named: "search"),
+										   selectedImage: UIImage(named: "search"))
+			let tabBarItem3 = UITabBarItem(title: "",
 										   image: UIImage(named: "profile"),
 										   selectedImage: UIImage(named: "profile"))
 			
 			root1.tabBarItem = tabBarItem1
+			root2.tabBarItem = tabBarItem2
+			root3.tabBarItem = tabBarItem3
 			
-			rootViewController.setViewControllers([root1], animated: true)
+			rootViewController.setViewControllers([root1, root2, root3], animated: true)
 		}
 		
-		return .multiple(flowContributors: [.contribute(withNextPresentable: privateFlow,
-														withNextStepper: OneStepper(withSingleStep: AppStep.userProfile)),
+		return .multiple(flowContributors: [
+			.contribute(withNextPresentable: generalFlow, withNextStepper: OneStepper(withSingleStep: AppStep.general)),
+			.contribute(withNextPresentable: searchFlow, withNextStepper: OneStepper(withSingleStep: AppStep.search)),
+			.contribute(withNextPresentable: privateFlow, withNextStepper: OneStepper(withSingleStep: AppStep.userProfile))
 		])
 	}
 }
