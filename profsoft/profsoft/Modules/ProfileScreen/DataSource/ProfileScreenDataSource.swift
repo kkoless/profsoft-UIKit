@@ -27,6 +27,7 @@ enum ProfileScreenItem {
 	case teacher(model: TeacherCellModelProtocol)
 	case certificate
 	case share
+	case showLess(model: ShowLessCellModelProtocol)
 	// и другие
 }
 
@@ -79,6 +80,11 @@ final class ProfileScreenDataSource {
 				return EmptyCellBuilder<CertificateTableViewCell>.build(tableView: tableView, indexPath: indexPath)
 			case .share:
 				return EmptyCellBuilder<ShareTableViewCell>.build(tableView: tableView, indexPath: indexPath)
+				
+			case .showLess(model: let model):
+				return CellBuilder<ShowLessTableViewCell>.build(tableView: tableView,
+															  indexPath: indexPath,
+															  model: model)
 				
 				
 			default:

@@ -45,6 +45,9 @@
 		E521C2D526BDD8DD00381EC3 /* SearchFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */; };
 		E521C2D926BDDC0A00381EC3 /* ShareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2D726BDDC0A00381EC3 /* ShareTableViewCell.swift */; };
 		E521C2DA26BDDC0A00381EC3 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */; };
+		E521C2DE26BDE67B00381EC3 /* ShowLessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2DC26BDE67B00381EC3 /* ShowLessTableViewCell.swift */; };
+		E521C2DF26BDE67B00381EC3 /* ShowLessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */; };
+		E521C2E126BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -116,6 +119,9 @@
 		E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFlow.swift; sourceTree = "<group>"; };
 		E521C2D726BDDC0A00381EC3 /* ShareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTableViewCell.swift; sourceTree = "<group>"; };
 		E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
+		E521C2DC26BDE67B00381EC3 /* ShowLessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLessTableViewCell.swift; sourceTree = "<group>"; };
+		E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLessTableViewCell.xib; sourceTree = "<group>"; };
+		E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLessCellModelProtocol.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 		E514D9F526B8837A00647DE9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E521C2DB26BDE66800381EC3 /* ShowLessCell */,
 				E521C2D626BDDBF800381EC3 /* ShareCell */,
 				E521C2CD26BDD50300381EC3 /* CertificateCell */,
 				E521C2C426BD4D8200381EC3 /* TeacherCell */,
@@ -261,6 +268,7 @@
 				E521C2C226BC824300381EC3 /* ShowMoreCellModelProtocol.swift */,
 				E521C2C026BC75BB00381EC3 /* StudyCellModelProtocol.swift */,
 				E521C2C926BD4DED00381EC3 /* TeacherCellModelProtocol.swift */,
+				E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -364,6 +372,15 @@
 				E521C2D826BDDC0A00381EC3 /* ShareTableViewCell.xib */,
 			);
 			path = ShareCell;
+			sourceTree = "<group>";
+		};
+		E521C2DB26BDE66800381EC3 /* ShowLessCell */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2DC26BDE67B00381EC3 /* ShowLessTableViewCell.swift */,
+				E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */,
+			);
+			path = ShowLessCell;
 			sourceTree = "<group>";
 		};
 		E56FAC9126BAD1EE00A9689A /* Font */ = {
@@ -662,6 +679,7 @@
 				E521C2BF26BC74EF00381EC3 /* StudyTableViewCell.xib in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
 				E50ADC1D26BACE00003BEE66 /* SectionCourcesTableViewCell.xib in Resources */,
+				E521C2DF26BDE67B00381EC3 /* ShowLessTableViewCell.xib in Resources */,
 				E521C2DA26BDDC0A00381EC3 /* ShareTableViewCell.xib in Resources */,
 				E521C2C826BD4D9300381EC3 /* TeacherTableViewCell.xib in Resources */,
 				E514DA1926B9D7B300647DE9 /* CertificateNumbTableViewCell.xib in Resources */,
@@ -737,6 +755,7 @@
 				E56FACA226BB40DD00A9689A /* EducationFormTableViewCell.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
+				E521C2E126BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift in Sources */,
 				E514DA0E26B9C67100647DE9 /* BaseMapper.swift in Sources */,
 				E514DA1826B9D7B300647DE9 /* CertificateNumbTableViewCell.swift in Sources */,
 				E521C2C326BC824300381EC3 /* ShowMoreCellModelProtocol.swift in Sources */,
@@ -745,6 +764,7 @@
 				E521C2BE26BC74EF00381EC3 /* StudyTableViewCell.swift in Sources */,
 				E521C2D326BDD8D500381EC3 /* GeneralFlow.swift in Sources */,
 				E514D9EC26B8564000647DE9 /* ProfileScreenViewController.swift in Sources */,
+				E521C2DE26BDE67B00381EC3 /* ShowLessTableViewCell.swift in Sources */,
 				E56FACA526BB47A800A9689A /* StudyPeriodCellModelProtocol.swift in Sources */,
 				E56FAC9726BB3D1300A9689A /* DirectionCellModelProtocol.swift in Sources */,
 				E5709F7F26B091E0005FAC4A /* Consts.swift in Sources */,

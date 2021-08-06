@@ -33,16 +33,22 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 		let sections = BehaviorRelay<[SectionType]>(value: [])
 		let mockItems = BehaviorRelay<[String]>(value: [])
 		
-		let showTap = PublishRelay<Void>()
+		let showTapMore = PublishRelay<Void>()
+		let showTapLess = PublishRelay<Void>()
 		
 		input.onAppear
 			.withLatestFrom(mockItems)
-			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTap) }
+			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
-		showTap.asObservable()
-			.map{ _ in ProfileScreenBuilder.extendedBuild() }
+		showTapMore.asObservable()
+			.map{ _ in ProfileScreenBuilder.extendedBuild(showTapLess: showTapLess) }
+			.bind(to: sections)
+			.disposed(by: disposeBag)
+		
+		showTapLess.asObservable()
+			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		

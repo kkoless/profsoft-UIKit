@@ -44,7 +44,7 @@ struct ProfileScreenBuilder {
 		]
 	}
 	
-	static func extendedBuild() -> [SectionType] {
+	static func extendedBuild(showTapLess: PublishRelay<Void>) -> [SectionType] {
 		
 		var courcesItems = [ProfileScreenItem]()
 
@@ -68,6 +68,8 @@ struct ProfileScreenBuilder {
 		
 		let share = ProfileScreenItem.share
 		
+		let showLess = ProfileScreenItem.showLess(model: ShowLessCellModel(tapToLess: showTapLess))
+		
 		courcesItems.append(certificateNumb)
 		courcesItems.append(direction)
 		courcesItems.append(educationForm)
@@ -76,6 +78,7 @@ struct ProfileScreenBuilder {
 		courcesItems.append(teacher)
 		courcesItems.append(certificate)
 		courcesItems.append(share)
+		courcesItems.append(showLess)
 
 		return [
 			SectionType(model: "", items: [user]),
