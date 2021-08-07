@@ -13,9 +13,30 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
 	
 	private var disposeBag = DisposeBag()
 	
-	@IBOutlet weak var userImageView: UIImageView!
+	@IBOutlet weak var userImageButton: UIButton!
 	@IBOutlet weak var userInfoLabel: UILabel!
 	@IBOutlet weak var userEmailLabel: UILabel!
+	
+	@IBAction func imageTapped(_ sender: UIButton) {
+		let imagePick = UIView(frame: CGRect(x: 0, y: 0, width: userImageButton.frame.width, height: userImageButton.frame.height))
+		imagePick.layer.cornerRadius = 10
+		imagePick.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.77)
+		
+		let pick = UIImageView(image: UIImage(named: "imagePick"))
+		pick.center = CGPoint(x: imagePick.bounds.midX,
+							  y: imagePick.bounds.midY)
+		
+		imagePick.addSubview(pick)
+
+		userImageButton.addSubview(imagePick)
+	}
+	
+	
+	private lazy var imagePicker: UIImagePickerController = {
+		let imagePicker = UIImagePickerController()
+		imagePicker.delegate = self
+		return imagePicker
+	}()
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +51,7 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
 	func configureCell(with model: HeaderCellModelProtocol) {
 		disposeBag = DisposeBag()
 
-		backgroundColor = UIColor.init(red: 0.28, green: 0.28, blue: 0.28, alpha: 1)
+		backgroundColor = UIColor.init(red: 28/255, green: 28/255, blue: 28/255, alpha: 1)
 
 		userInfoLabel.text = model.userInfo
 		userEmailLabel.text = model.userEmail
@@ -39,17 +60,24 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
     
 }
 
+extension HeaderTableViewCell: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	
+}
+
+
 
 private extension HeaderTableViewCell {
 
 	func configureUI() {
-		configureImageView()
+		configureImageButton()
 		configureUserInfoLabel()
 		configureUserEmailLabel()
 	}
 
-	func configureImageView() {
-		userImageView.image = UIImage(named: "userImage")
+	func configureImageButton() {
+		userImageButton.setTitle("", for: .normal)
+		userImageButton.setBackgroundImage(UIImage(named: "userImage"), for: .normal)
+		userImageButton.layer.cornerRadius = 10
 	}
 
 	func configureUserInfoLabel() {
@@ -59,8 +87,6 @@ private extension HeaderTableViewCell {
 		userInfoLabel.numberOfLines = 0
 		userInfoLabel.lineBreakMode = .byWordWrapping
 		userInfoLabel.sizeToFit()
-		
-		
 	}
 	
 	
