@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SplashScreenViewController" customModule="profsoft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-4a-BX3">
+                                <rect key="frame" x="97" y="438" width="117" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="l7I-at-xxi"/>
+                                    <constraint firstAttribute="width" constant="117" id="ug6-v2-wIg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eg3-7e-P2D">
+                                <rect key="frame" x="273" y="438" width="42" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="3ht-YK-vul"/>
+                                    <constraint firstAttribute="width" constant="42" id="72w-BI-Zvu"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1j-Qg-GsH">
+                                <rect key="frame" x="218" y="435" width="51" height="32"/>
+                                <color key="onTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eg3-7e-P2D" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="394" id="5sY-0b-1Sg"/>
+                            <constraint firstItem="eg3-7e-P2D" firstAttribute="top" secondItem="0vN-4a-BX3" secondAttribute="top" id="JDV-JH-GWr"/>
+                            <constraint firstItem="Z1j-Qg-GsH" firstAttribute="centerY" secondItem="eg3-7e-P2D" secondAttribute="centerY" id="Ptq-GO-AaQ"/>
+                            <constraint firstItem="Z1j-Qg-GsH" firstAttribute="leading" secondItem="0vN-4a-BX3" secondAttribute="trailing" constant="4" id="eNJ-s5-J4L"/>
+                            <constraint firstItem="Z1j-Qg-GsH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="391" id="hXj-fF-pxB"/>
+                            <constraint firstItem="eg3-7e-P2D" firstAttribute="leading" secondItem="Z1j-Qg-GsH" secondAttribute="trailing" constant="6" id="jDn-OM-AEG"/>
+                            <constraint firstItem="0vN-4a-BX3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="97" id="lTq-SC-97y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstHalfTextImageView" destination="0vN-4a-BX3" id="61w-uu-g2w"/>
+                        <outlet property="secondHalfTextImageView" destination="eg3-7e-P2D" id="HV7-cc-YzM"/>
+                        <outlet property="switchPart" destination="Z1j-Qg-GsH" id="yvE-Es-sUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

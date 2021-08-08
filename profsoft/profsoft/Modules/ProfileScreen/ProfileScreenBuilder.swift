@@ -42,6 +42,7 @@ struct ProfileScreenBuilder {
 		let studyPeriod2 = ProfileScreenItem.studyPeriod(model: studyPeriodModel)
 		let showMore2 = ProfileScreenItem.showMore(model: showMoreModel)
 		
+		courcesItems.append(sectionCources)
 		courcesItems.append(certificateNumb1)
 		courcesItems.append(direction1)
 		courcesItems.append(educationForm1)
@@ -56,7 +57,6 @@ struct ProfileScreenBuilder {
 
 		return [
 			SectionType(model: .none, items: [user]),
-			SectionType(model: .courses, items: [sectionCources]),
 			SectionType(model: .courses, items: courcesItems)
 		]
 	}
@@ -97,6 +97,7 @@ struct ProfileScreenBuilder {
 		let studyPeriod2 = ProfileScreenItem.studyPeriod(model: studyPeriodModel)
 		let showMore2 = ProfileScreenItem.showMore(model: showMoreModel)
 		
+		courcesItems.append(sectionCources)
 		courcesItems.append(certificateNumb1)
 		courcesItems.append(direction1)
 		courcesItems.append(educationForm1)
@@ -115,7 +116,6 @@ struct ProfileScreenBuilder {
 		
 		return [
 			SectionType(model: .none, items: [user]),
-			SectionType(model: .courses, items: [sectionCources]),
 			SectionType(model: .courses, items: courcesItems)
 		]
 	}

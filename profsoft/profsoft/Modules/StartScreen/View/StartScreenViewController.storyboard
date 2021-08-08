@@ -24,10 +24,22 @@
                                 <rect key="frame" x="16" y="766" width="382" height="30"/>
                                 <state key="normal" title="Вход"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gp1-Rx-dYy">
-                                <rect key="frame" x="78" y="434" width="258" height="110"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cwR-lM-NfI">
+                                <rect key="frame" x="97" y="437.5" width="117" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="z63-Zk-41O"/>
+                                    <constraint firstAttribute="width" constant="117" id="ITl-wZ-SmD"/>
+                                    <constraint firstAttribute="height" constant="26" id="X1p-Z0-zSG"/>
+                                </constraints>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QRg-kf-U9k">
+                                <rect key="frame" x="218" y="435" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0k9-7D-r65">
+                                <rect key="frame" x="273" y="437.5" width="42" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="fCn-uK-Dd7"/>
+                                    <constraint firstAttribute="height" constant="26" id="lTf-bu-LXl"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -36,19 +48,24 @@
                         <constraints>
                             <constraint firstItem="m9s-S0-7N7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6hX-ek-19c"/>
                             <constraint firstItem="LpS-lm-YLs" firstAttribute="top" secondItem="m9s-S0-7N7" secondAttribute="bottom" constant="16" id="I1S-Gj-4zd"/>
-                            <constraint firstItem="gp1-Rx-dYy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="78" id="Jzb-TR-t1Z"/>
                             <constraint firstItem="LpS-lm-YLs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Kl0-Ww-1IK"/>
                             <constraint firstAttribute="bottom" secondItem="LpS-lm-YLs" secondAttribute="bottom" constant="54" id="M0b-OT-trH"/>
+                            <constraint firstItem="QRg-kf-U9k" firstAttribute="leading" secondItem="cwR-lM-NfI" secondAttribute="trailing" constant="4" id="NWd-WP-6zm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m9s-S0-7N7" secondAttribute="trailing" constant="16" id="NgO-Zg-dFz"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gp1-Rx-dYy" secondAttribute="trailing" constant="78" id="iUi-7n-r2s"/>
+                            <constraint firstItem="QRg-kf-U9k" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="391" id="UOh-vv-zUw"/>
+                            <constraint firstItem="cwR-lM-NfI" firstAttribute="top" secondItem="0k9-7D-r65" secondAttribute="top" id="XgO-DD-MMZ"/>
+                            <constraint firstItem="cwR-lM-NfI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="97" id="iAs-ub-AZW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LpS-lm-YLs" secondAttribute="trailing" constant="16" id="rst-YX-3KW"/>
-                            <constraint firstItem="gp1-Rx-dYy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="390" id="xcR-2c-WN5"/>
+                            <constraint firstItem="cwR-lM-NfI" firstAttribute="centerY" secondItem="QRg-kf-U9k" secondAttribute="centerY" id="x15-Ru-sMr"/>
+                            <constraint firstItem="0k9-7D-r65" firstAttribute="leading" secondItem="QRg-kf-U9k" secondAttribute="trailing" constant="6" id="znJ-Gc-Gfu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="companyNameImageView" destination="gp1-Rx-dYy" id="91L-EQ-Vg1"/>
                         <outlet property="enterButton" destination="m9s-S0-7N7" id="aH7-ma-AfW"/>
+                        <outlet property="firstHalfTextImageView" destination="cwR-lM-NfI" id="Kjr-qs-nmX"/>
+                        <outlet property="secondHalfTextImageView" destination="0k9-7D-r65" id="ENq-FO-e05"/>
                         <outlet property="skipButton" destination="LpS-lm-YLs" id="pEj-0J-Hdo"/>
+                        <outlet property="switchPart" destination="QRg-kf-U9k" id="307-QT-wyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

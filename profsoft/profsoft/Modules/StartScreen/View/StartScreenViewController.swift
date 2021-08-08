@@ -17,7 +17,9 @@ class StartScreenViewController: UIViewController, StoryboardBased {
 	@IBOutlet weak var enterButton: UIButton!
 	@IBOutlet weak var skipButton: UIButton!
 	
-	@IBOutlet weak var companyNameImageView: UIImageView!
+	@IBOutlet weak var firstHalfTextImageView: UIImageView!
+	@IBOutlet weak var switchPart: UISwitch!
+	@IBOutlet weak var secondHalfTextImageView: UIImageView!
 	
 	
 	private var input: StartScreenViewModelInputProtocol!
@@ -76,7 +78,11 @@ private extension StartScreenViewController {
 	}
 	
 	func configureCompanyLogo(){
-		companyNameImageView.image = Consts.ImageLoginScreen.companyLogo
+		firstHalfTextImageView.image = UIImage(named: "firstHalf")
+		secondHalfTextImageView.image = UIImage(named: "secondHalf")
+		
+		firstHalfTextImageView.contentMode = .scaleAspectFit
+		secondHalfTextImageView.contentMode = .scaleAspectFit
 	}
 
 }

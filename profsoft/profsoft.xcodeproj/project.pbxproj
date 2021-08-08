@@ -49,6 +49,10 @@
 		E521C2DF26BDE67B00381EC3 /* ShowLessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */; };
 		E521C2E126BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */; };
 		E521C2E326BF252D00381EC3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2E226BF252D00381EC3 /* ImagePicker.swift */; };
+		E521C2EB26C002EA00381EC3 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2EA26C002EA00381EC3 /* SplashScreenViewController.swift */; };
+		E521C2ED26C0036D00381EC3 /* SplashScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521C2EC26C0036D00381EC3 /* SplashScreenViewController.storyboard */; };
+		E521C2F026C0041600381EC3 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2EF26C0041600381EC3 /* SplashPresenter.swift */; };
+		E521C2F226C0067300381EC3 /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2F126C0067300381EC3 /* SplashAnimator.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -124,6 +128,10 @@
 		E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLessTableViewCell.xib; sourceTree = "<group>"; };
 		E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLessCellModelProtocol.swift; sourceTree = "<group>"; };
 		E521C2E226BF252D00381EC3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E521C2EA26C002EA00381EC3 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		E521C2EC26C0036D00381EC3 /* SplashScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreenViewController.storyboard; sourceTree = "<group>"; };
+		E521C2EF26C0041600381EC3 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		E521C2F126C0067300381EC3 /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -385,6 +393,25 @@
 			path = ShowLessCell;
 			sourceTree = "<group>";
 		};
+		E521C2E926C002CB00381EC3 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2EE26C0040200381EC3 /* View */,
+				E521C2EF26C0041600381EC3 /* SplashPresenter.swift */,
+				E521C2F126C0067300381EC3 /* SplashAnimator.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		E521C2EE26C0040200381EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2EA26C002EA00381EC3 /* SplashScreenViewController.swift */,
+				E521C2EC26C0036D00381EC3 /* SplashScreenViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E56FAC9126BAD1EE00A9689A /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +502,7 @@
 		E5709F7826B09181005FAC4A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E521C2E926C002CB00381EC3 /* SplashScreen */,
 				E5709F8C26B09E51005FAC4A /* StartScreen */,
 				E5855F9726B1B66400E104BE /* LoginScreen */,
 				E514D9E726B855F600647DE9 /* ProfileScreen */,
@@ -679,6 +707,7 @@
 				E5709F6C26B0901C005FAC4A /* Assets.xcassets in Resources */,
 				E5709F9B26B0BE18005FAC4A /* StartScreenViewController.storyboard in Resources */,
 				E521C2D126BDD5BC00381EC3 /* CertificateTableViewCell.xib in Resources */,
+				E521C2ED26C0036D00381EC3 /* SplashScreenViewController.storyboard in Resources */,
 				E521C2BF26BC74EF00381EC3 /* StudyTableViewCell.xib in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
 				E50ADC1D26BACE00003BEE66 /* SectionCourcesTableViewCell.xib in Resources */,
@@ -756,6 +785,7 @@
 				E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
 				E521C2D926BDDC0A00381EC3 /* ShareTableViewCell.swift in Sources */,
+				E521C2F226C0067300381EC3 /* SplashAnimator.swift in Sources */,
 				E56FACA226BB40DD00A9689A /* EducationFormTableViewCell.swift in Sources */,
 				E5709F9726B0A00C005FAC4A /* StartScreenViewModelProtocols.swift in Sources */,
 				E5709F8126B0977C005FAC4A /* CellBuilder.swift in Sources */,
@@ -777,6 +807,7 @@
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
 				E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */,
 				E521C2D526BDD8DD00381EC3 /* SearchFlow.swift in Sources */,
+				E521C2F026C0041600381EC3 /* SplashPresenter.swift in Sources */,
 				E521C2D026BDD5BC00381EC3 /* CertificateTableViewCell.swift in Sources */,
 				E56FAC9E26BB408800A9689A /* EducationFormCellModelProtocol.swift in Sources */,
 				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
@@ -787,6 +818,7 @@
 				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
 				E521C2B926BBE7D400381EC3 /* ShowMoreTableViewCell.swift in Sources */,
 				E50ADC1C26BACE00003BEE66 /* SectionCourcesTableViewCell.swift in Sources */,
+				E521C2EB26C002EA00381EC3 /* SplashScreenViewController.swift in Sources */,
 				E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */,
 				E56FAC9B26BB3D9B00A9689A /* DirectionTableViewCell.swift in Sources */,
 				E521C2C726BD4D9300381EC3 /* TeacherTableViewCell.swift in Sources */,
