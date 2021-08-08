@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер сертификата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePa-id-pfa" userLabel="Title Certifiacte Label">
-                        <rect key="frame" x="16" y="10" width="343" height="25.5"/>
+                        <rect key="frame" x="16" y="5" width="343" height="35.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="№" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLd-ox-IfC" userLabel="№ Certificate Label">
-                        <rect key="frame" x="16" y="40.5" width="343" height="20.5"/>
+                        <rect key="frame" x="16" y="45.5" width="343" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,8 +32,8 @@
                 <constraints>
                     <constraint firstItem="RLd-ox-IfC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="91P-en-RsC"/>
                     <constraint firstAttribute="trailing" secondItem="RLd-ox-IfC" secondAttribute="trailing" constant="16" id="JD7-cs-W7h"/>
-                    <constraint firstAttribute="bottom" secondItem="RLd-ox-IfC" secondAttribute="bottom" constant="10" id="XtO-w0-yTl"/>
-                    <constraint firstItem="ePa-id-pfa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Xxo-I4-KOM"/>
+                    <constraint firstAttribute="bottom" secondItem="RLd-ox-IfC" secondAttribute="bottom" constant="5" id="XtO-w0-yTl" userLabel="bottom = № Certificate Label.bottom + 5"/>
+                    <constraint firstItem="ePa-id-pfa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Xxo-I4-KOM" userLabel="Title Certifiacte Label.top = top + 5"/>
                     <constraint firstItem="RLd-ox-IfC" firstAttribute="top" secondItem="ePa-id-pfa" secondAttribute="bottom" constant="5" id="fq3-C2-9fm"/>
                     <constraint firstAttribute="trailing" secondItem="ePa-id-pfa" secondAttribute="trailing" constant="16" id="qe5-Xq-2q4"/>
                     <constraint firstItem="ePa-id-pfa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tpl-qZ-e2V"/>

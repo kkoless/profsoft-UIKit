@@ -48,6 +48,7 @@
 		E521C2DE26BDE67B00381EC3 /* ShowLessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2DC26BDE67B00381EC3 /* ShowLessTableViewCell.swift */; };
 		E521C2DF26BDE67B00381EC3 /* ShowLessTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */; };
 		E521C2E126BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */; };
+		E521C2E326BF252D00381EC3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2E226BF252D00381EC3 /* ImagePicker.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -122,6 +123,7 @@
 		E521C2DC26BDE67B00381EC3 /* ShowLessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLessTableViewCell.swift; sourceTree = "<group>"; };
 		E521C2DD26BDE67B00381EC3 /* ShowLessTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowLessTableViewCell.xib; sourceTree = "<group>"; };
 		E521C2E026BDE6FE00381EC3 /* ShowLessCellModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowLessCellModelProtocol.swift; sourceTree = "<group>"; };
+		E521C2E226BF252D00381EC3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -531,6 +533,7 @@
 				E5709F7E26B091E0005FAC4A /* Consts.swift */,
 				E5709F8026B0977C005FAC4A /* CellBuilder.swift */,
 				E5855FB326B34F7500E104BE /* AlertHelper.swift */,
+				E521C2E226BF252D00381EC3 /* ImagePicker.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				E521C2CA26BD4DED00381EC3 /* TeacherCellModelProtocol.swift in Sources */,
 				E5855FA126B1B73600E104BE /* LoginScreenViewModel.swift in Sources */,
 				E514D9F426B856DD00647DE9 /* ProfileScreenViewModelProtocols.swift in Sources */,
+				E521C2E326BF252D00381EC3 /* ImagePicker.swift in Sources */,
 				E514DA0B26B9C5DC00647DE9 /* MasterProvider.swift in Sources */,
 				E5709F8526B097FC005FAC4A /* AppStep.swift in Sources */,
 				E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */,

@@ -23,14 +23,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-LQ-LSP">
-                        <rect key="frame" x="16" y="31" width="288" height="25"/>
+                        <rect key="frame" x="16" y="31" width="288" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ysV-LQ-LSP" secondAttribute="bottom" constant="10" id="28a-qV-7aZ"/>
+                    <constraint firstAttribute="bottom" secondItem="ysV-LQ-LSP" secondAttribute="bottom" constant="5" id="28a-qV-7aZ" userLabel="bottom = Direction Name Label.bottom + 5"/>
                     <constraint firstItem="ysV-LQ-LSP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2gJ-4h-3uu"/>
                     <constraint firstItem="8x0-ua-KSG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9yl-TH-HQz"/>
                     <constraint firstItem="ysV-LQ-LSP" firstAttribute="top" secondItem="8x0-ua-KSG" secondAttribute="bottom" constant="5" id="L8A-bp-CzY"/>

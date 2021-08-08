@@ -23,7 +23,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSw-w8-Yxo" userLabel="Teacher Nmae Label">
-                        <rect key="frame" x="16" y="31" width="343" height="10"/>
+                        <rect key="frame" x="16" y="31" width="343" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="lSw-w8-Yxo" firstAttribute="top" secondItem="XxB-bQ-zjt" secondAttribute="bottom" constant="5" id="0L6-aH-TcC"/>
-                    <constraint firstAttribute="bottom" secondItem="lSw-w8-Yxo" secondAttribute="bottom" constant="10" id="DIc-6T-Vwh"/>
+                    <constraint firstAttribute="bottom" secondItem="lSw-w8-Yxo" secondAttribute="bottom" constant="5" id="DIc-6T-Vwh" userLabel="bottom = Teacher Nmae Label.bottom + 5"/>
                     <constraint firstItem="XxB-bQ-zjt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NDh-cy-INP"/>
                     <constraint firstAttribute="trailing" secondItem="XxB-bQ-zjt" secondAttribute="trailing" constant="16" id="SEu-tG-GOA"/>
                     <constraint firstItem="XxB-bQ-zjt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bpI-vB-XjY"/>

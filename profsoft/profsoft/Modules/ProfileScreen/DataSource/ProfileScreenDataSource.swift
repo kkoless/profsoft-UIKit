@@ -33,7 +33,7 @@ enum ProfileScreenItem {
 
 final class ProfileScreenDataSource {
 
-	typealias SectionType = SectionModel<String, ProfileScreenItem>
+	typealias SectionType = SectionModel<ProfileScreenHeader, ProfileScreenItem>
 
 	typealias DataSource = RxTableViewSectionedReloadDataSource<SectionType>
 

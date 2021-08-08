@@ -12,12 +12,12 @@ struct ProfileScreenBuilder {
 
 	typealias SectionType = ProfileScreenDataSource.SectionType
 
-	static func build(showTapMore: PublishRelay<Void>, showTapLess: PublishRelay<Void>) -> [SectionType] {
+	static func build(imageUser: BehaviorRelay<UIImage>, imageTap: PublishRelay<Void>, showTapMore: PublishRelay<Void>, showTapLess: PublishRelay<Void>) -> [SectionType] {
 		
 
 		var courcesItems = [ProfileScreenItem]()
 		
-		let headerModel = HeaderCellModel(userInfo: "Кожин Александр Сергеевич".uppercased(), userEmail: "kologram@gmail.com", imageTap: PublishRelay<Void>())
+		let headerModel = HeaderCellModel(userInfo: "Кожин Александр Сергеевич".uppercased(), userEmail: "kologram@gmail.com", userImage: imageUser.value, imageTap: imageTap)
 		let certificateNumbModel = CertificateNumbCellModel(certificateId: "№ 08-09270-7321897")
 		let directionModel = DirectionCellModel(directionName: "Design")
 		let educationFormModel = EducationFormCellModel(educationName: "очная")
@@ -55,17 +55,17 @@ struct ProfileScreenBuilder {
 		courcesItems.append(showMore2)
 
 		return [
-			SectionType(model: "", items: [user]),
-			SectionType(model: "", items: [sectionCources]),
-			SectionType(model: "Мои курсы".uppercased(), items: courcesItems)
+			SectionType(model: .none, items: [user]),
+			SectionType(model: .courses, items: [sectionCources]),
+			SectionType(model: .courses, items: courcesItems)
 		]
 	}
 	
-	static func extendedBuild(showTapLess: PublishRelay<Void>, showTapMore: PublishRelay<Void>) -> [SectionType] {
+	static func extendedBuild(imageUser: BehaviorRelay<UIImage>, imageTap: PublishRelay<Void>, showTapLess: PublishRelay<Void>, showTapMore: PublishRelay<Void>) -> [SectionType] {
 		
 		var courcesItems = [ProfileScreenItem]()
 
-		let headerModel = HeaderCellModel(userInfo: "Кожин Александр Сергеевич".uppercased(), userEmail: "kologram@gmail.com", imageTap: PublishRelay<Void>())
+		let headerModel = HeaderCellModel(userInfo: "Кожин Александр Сергеевич".uppercased(), userEmail: "kologram@gmail.com", userImage: imageUser.value, imageTap: imageTap)
 		let certificateNumbModel = CertificateNumbCellModel(certificateId: "№ 08-09270-7321897")
 		let directionModel = DirectionCellModel(directionName: "Design")
 		let educationFormModel = EducationFormCellModel(educationName: "очная")
@@ -114,9 +114,9 @@ struct ProfileScreenBuilder {
 		courcesItems.append(showMore2)
 		
 		return [
-			SectionType(model: "", items: [user]),
-			SectionType(model: "", items: [sectionCources]),
-			SectionType(model: "Мои курсы".uppercased(), items: courcesItems)
+			SectionType(model: .none, items: [user]),
+			SectionType(model: .courses, items: [sectionCources]),
+			SectionType(model: .courses, items: courcesItems)
 		]
 	}
 }

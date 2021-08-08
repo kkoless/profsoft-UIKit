@@ -13,12 +13,13 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
 	
 	private var disposeBag = DisposeBag()
 	
-	@IBOutlet weak var userImageButton: UIButton!
-	@IBOutlet weak var userInfoLabel: UILabel!
-	@IBOutlet weak var userEmailLabel: UILabel!
+	@IBOutlet private weak var userImageButton: UIButton!
+	@IBOutlet private weak var userInfoLabel: UILabel!
+	@IBOutlet private weak var userEmailLabel: UILabel!
 	
-	@IBAction func imageTapped(_ sender: UIButton) {
+	private var imagePick: UIView {
 		let imagePick = UIView(frame: CGRect(x: 0, y: 0, width: userImageButton.frame.width, height: userImageButton.frame.height))
+		
 		imagePick.layer.cornerRadius = 10
 		imagePick.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.77)
 		
@@ -27,16 +28,15 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
 							  y: imagePick.bounds.midY)
 		
 		imagePick.addSubview(pick)
-
-		userImageButton.addSubview(imagePick)
+		imagePick.tag = 100
+		
+		return imagePick
 	}
 	
 	
-	private lazy var imagePicker: UIImagePickerController = {
-		let imagePicker = UIImagePickerController()
-		imagePicker.delegate = self
-		return imagePicker
-	}()
+	@IBAction func imageTapped(_ sender: UIButton) {
+		userImageButton.addSubview(imagePick)
+	}
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,10 +52,16 @@ class HeaderTableViewCell: UITableViewCell, CellConfigurable {
 		disposeBag = DisposeBag()
 
 		backgroundColor = UIColor.init(red: 28/255, green: 28/255, blue: 28/255, alpha: 1)
-
+		
+		userImageButton.rx.tap
+			.bind(to: model.imageTap)
+			.disposed(by: disposeBag)
+		
+		userImageButton.viewWithTag(100)?.removeFromSuperview()
+		userImageButton.setBackgroundImage(model.userImage, for: .normal)
 		userInfoLabel.text = model.userInfo
 		userEmailLabel.text = model.userEmail
-		
+
 	}
     
 }
@@ -78,6 +84,8 @@ private extension HeaderTableViewCell {
 		userImageButton.setTitle("", for: .normal)
 		userImageButton.setBackgroundImage(UIImage(named: "userImage"), for: .normal)
 		userImageButton.layer.cornerRadius = 10
+		userImageButton.layer.masksToBounds = true
+		userImageButton.contentMode = .scaleAspectFit
 	}
 
 	func configureUserInfoLabel() {

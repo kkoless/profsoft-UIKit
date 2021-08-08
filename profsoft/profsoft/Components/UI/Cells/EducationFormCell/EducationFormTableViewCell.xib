@@ -23,7 +23,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="очная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHO-Rr-xHX" userLabel="EducationForm Label">
-                        <rect key="frame" x="16" y="31" width="288" height="24"/>
+                        <rect key="frame" x="16" y="31" width="288" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                     <constraint firstAttribute="trailing" secondItem="vHO-Rr-xHX" secondAttribute="trailing" constant="16" id="1XF-jP-egr"/>
                     <constraint firstItem="Uht-Eq-Exi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="CNp-R9-cNG"/>
                     <constraint firstAttribute="trailing" secondItem="Uht-Eq-Exi" secondAttribute="trailing" constant="16" id="E81-VG-zaS"/>
-                    <constraint firstAttribute="bottom" secondItem="vHO-Rr-xHX" secondAttribute="bottom" constant="10" id="EKw-0x-TS3"/>
+                    <constraint firstAttribute="bottom" secondItem="vHO-Rr-xHX" secondAttribute="bottom" constant="5" id="EKw-0x-TS3" userLabel="bottom = EducationForm Label.bottom + 5"/>
                     <constraint firstItem="vHO-Rr-xHX" firstAttribute="top" secondItem="Uht-Eq-Exi" secondAttribute="bottom" constant="5" id="ahx-H4-rAR"/>
                     <constraint firstItem="vHO-Rr-xHX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vDN-mK-duq"/>
                 </constraints>

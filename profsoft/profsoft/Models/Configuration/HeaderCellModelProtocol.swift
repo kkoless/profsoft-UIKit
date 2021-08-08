@@ -9,18 +9,19 @@ import Foundation
 import RxCocoa
 
 protocol HeaderCellModelProtocol {
-	//var userImage: UIImage { get }
 	var userInfo: String { get }
 	var userEmail: String  { get }
+	var userImage: UIImage { get }
 	var imageTap: PublishRelay<Void> { get }
 }
 
 struct HeaderCellModel {
-	//let userImage: UIImage
 	let userInfo: String
 	let userEmail: String
+	let userImage: UIImage
 	let imageTap: PublishRelay<Void>
 }
 
-extension HeaderCellModel: HeaderCellModelProtocol {}
+extension HeaderCellModel: HeaderCellModelProtocol {
+}
 

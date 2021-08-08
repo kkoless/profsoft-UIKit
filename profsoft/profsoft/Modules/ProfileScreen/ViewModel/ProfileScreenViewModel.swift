@@ -12,6 +12,9 @@ import RxFlow
 
 struct ProfileScreenViewModelInput: ProfileScreenViewModelInputProtocol {
 	let onAppear: Observable<Void>
+	let imagePicker: ImagePicker
+	let tableView: UITableView
+	let userImage: BehaviorRelay<UIImage>
 }
 
 struct ProfileScreenViewModelOutput: ProfileScreenViewModelOutputProtocol {
@@ -35,20 +38,34 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 		
 		let showTapMore = PublishRelay<Void>()
 		let showTapLess = PublishRelay<Void>()
+		let imageTap = PublishRelay<Void>()
+		//let imageUser = BehaviorRelay<UIImage>(value: UIImage(named: "userImage")!)
+		//let changeImage = PublishRelay<Void>()
 		
 		input.onAppear
 			.withLatestFrom(mockItems)
-			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore, showTapLess: showTapLess) }
+			.map{ _ in ProfileScreenBuilder.build(imageUser: input.userImage, imageTap: imageTap, showTapMore: showTapMore, showTapLess: showTapLess) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
-		showTapMore.asObservable()
-			.map{ _ in ProfileScreenBuilder.extendedBuild(showTapLess: showTapLess, showTapMore: showTapMore) }
+		showTapMore
+			.map{ _ in ProfileScreenBuilder.extendedBuild(imageUser: input.userImage, imageTap: imageTap, showTapLess: showTapLess, showTapMore: showTapMore) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
-		showTapLess.asObservable()
-			.map{ _ in ProfileScreenBuilder.build(showTapMore: showTapMore, showTapLess: showTapLess) }
+		showTapLess
+			.map{ _ in ProfileScreenBuilder.build(imageUser: input.userImage, imageTap: imageTap, showTapMore: showTapMore, showTapLess: showTapLess) }
+			.bind(to: sections)
+			.disposed(by: disposeBag)
+		
+		imageTap
+			.subscribe(onNext: {
+				input.imagePicker.present()
+			})
+			.disposed(by: disposeBag)
+		
+		input.userImage
+			.map{ _ in ProfileScreenBuilder.build(imageUser: input.userImage, imageTap: imageTap, showTapMore: showTapMore, showTapLess: showTapLess) }
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
@@ -58,4 +75,6 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 		
 		return output
 	}
+	
+	
 }

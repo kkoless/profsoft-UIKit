@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Период обучения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-hT-eog" userLabel="Title Label">
-                        <rect key="frame" x="16" y="5" width="288" height="25"/>
+                        <rect key="frame" x="16" y="5" width="288" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="01.07.2021-30.08.2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uA-Qg-wo5" userLabel="Study Period Label">
-                        <rect key="frame" x="16" y="35" width="288" height="21"/>
+                        <rect key="frame" x="16" y="40" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                     <constraint firstItem="8uA-Qg-wo5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3L6-4M-oDD"/>
                     <constraint firstAttribute="trailing" secondItem="UZw-hT-eog" secondAttribute="trailing" constant="16" id="DCi-dl-zHi"/>
                     <constraint firstItem="8uA-Qg-wo5" firstAttribute="top" secondItem="UZw-hT-eog" secondAttribute="bottom" constant="5" id="L1k-Dr-pAc"/>
-                    <constraint firstAttribute="bottom" secondItem="8uA-Qg-wo5" secondAttribute="bottom" constant="10" id="X4s-HZ-Ya5"/>
+                    <constraint firstAttribute="bottom" secondItem="8uA-Qg-wo5" secondAttribute="bottom" constant="5" id="X4s-HZ-Ya5" userLabel="bottom = Study Period Label.bottom + 5"/>
                     <constraint firstAttribute="trailing" secondItem="8uA-Qg-wo5" secondAttribute="trailing" constant="16" id="Z4e-fQ-pAj"/>
                     <constraint firstItem="UZw-hT-eog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="mJR-ex-2md"/>
                     <constraint firstItem="UZw-hT-eog" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vXK-by-ehd"/>

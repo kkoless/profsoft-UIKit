@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ПОДЕЛИТЬСЯ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9I-XK-L11">
-                        <rect key="frame" x="16" y="5" width="288" height="29"/>
+                        <rect key="frame" x="16" y="5" width="288" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -27,7 +27,7 @@
                     <constraint firstAttribute="trailing" secondItem="w9I-XK-L11" secondAttribute="trailing" constant="16" id="1Iv-EF-6sX"/>
                     <constraint firstItem="w9I-XK-L11" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Qtz-fX-72U"/>
                     <constraint firstItem="w9I-XK-L11" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ojN-lJ-GFw"/>
-                    <constraint firstAttribute="bottom" secondItem="w9I-XK-L11" secondAttribute="bottom" constant="10" id="qA9-wG-Lhy"/>
+                    <constraint firstAttribute="bottom" secondItem="w9I-XK-L11" secondAttribute="bottom" constant="5" id="qA9-wG-Lhy" userLabel="bottom = Share Label.bottom + 5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

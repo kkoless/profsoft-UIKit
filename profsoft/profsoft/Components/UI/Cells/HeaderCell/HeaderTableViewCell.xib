@@ -36,7 +36,7 @@
                         </constraints>
                         <state key="normal" title="rr"/>
                         <connections>
-                            <action selector="imageTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lkR-Us-3yM"/>
+                            <action selector="imageTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ozC-Dq-cb9"/>
                         </connections>
                     </button>
                 </subviews>

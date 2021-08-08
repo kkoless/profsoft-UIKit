@@ -26,7 +26,6 @@ enum AppStep: Step {
 	case userProfile // (user: User)
 	
 	
-	
 	case general
 	case search
 	
