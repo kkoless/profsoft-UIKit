@@ -26,6 +26,12 @@ class LoginScreenViewController: UIViewController, StoryboardBased {
 	
 	@IBOutlet private weak var companyLogoImageView: UIImageView!
 	
+	
+	@IBOutlet weak var enterButtonConstrait: NSLayoutConstraint!
+	@IBOutlet weak var forgotPassButtonConstraintTop: NSLayoutConstraint!
+	@IBOutlet weak var companyLogoConstraintBottom: NSLayoutConstraint!
+	
+	
 	private var showPassButton =  UIButton()
 	
 	
@@ -71,10 +77,20 @@ extension LoginScreenViewController: UITextFieldDelegate {
 private extension LoginScreenViewController {
 	
 	@objc func keyboardWillShow(notification: NSNotification) {
+		
 		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
 			if self.view.frame.origin.y == 0 {
 				self.view.frame.origin.y -= keyboardSize.height
 			}
+			
+			enterButtonConstrait.constant = -15
+			forgotPassButtonConstraintTop.constant = 40
+			companyLogoConstraintBottom.constant = 100
+			
+			UIView.animate(withDuration: 0.5){
+				self.view.layoutIfNeeded()
+			}
+			
 		}
 	}
 
@@ -82,6 +98,19 @@ private extension LoginScreenViewController {
 		if self.view.frame.origin.y != 0 {
 			self.view.frame.origin.y = 0
 		}
+		
+		enterButtonConstrait.constant = 20
+		forgotPassButtonConstraintTop.constant = 115
+		companyLogoConstraintBottom.constant = 193
+		
+		enterButton.backgroundColor = .black
+		enterButton.layer.borderColor = UIColor.black.cgColor
+		
+		UIView.animate(withDuration: 0.5){
+			self.view.layoutIfNeeded()
+			
+		}
+		
 	}
 	
 }
@@ -132,10 +161,10 @@ private extension LoginScreenViewController {
 		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 16)
 		enterButton.tintColor = .white
 		
-		enterButton.backgroundColor = .black
+		enterButton.backgroundColor = .gray
 		enterButton.layer.cornerRadius = 22
 		enterButton.layer.borderWidth = 2
-		enterButton.layer.borderColor = UIColor.black.cgColor
+		enterButton.layer.borderColor = UIColor.gray.cgColor
 		
 		enterButton.contentEdgeInsets = UIEdgeInsets(top: 13, left: 8, bottom: 13, right: 8)
 	}
@@ -200,6 +229,14 @@ private extension LoginScreenViewController {
 		emailErrorLabel.font = UIFont(name: "Golos", size: 11)
 		emailErrorLabel.textColor = .red
 		emailErrorLabel.text = ""
+	}
+	
+	func addConstraints(){
+		var constraints = [NSLayoutConstraint]()
+		
+		constraints.append(enterButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20))
+		
+		NSLayoutConstraint.activate(constraints)
 	}
 }
 
