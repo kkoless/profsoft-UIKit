@@ -13,7 +13,6 @@ import RxFlow
 struct ProfileScreenViewModelInput: ProfileScreenViewModelInputProtocol {
 	let onAppear: Observable<Void>
 	let imagePicker: ImagePicker
-	let tableView: UITableView
 	let userImage: BehaviorRelay<UIImage>
 }
 
@@ -39,8 +38,6 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 		let showTapMore = PublishRelay<Void>()
 		let showTapLess = PublishRelay<Void>()
 		let imageTap = PublishRelay<Void>()
-		//let imageUser = BehaviorRelay<UIImage>(value: UIImage(named: "userImage")!)
-		//let changeImage = PublishRelay<Void>()
 		
 		input.onAppear
 			.withLatestFrom(mockItems)
@@ -69,7 +66,6 @@ extension ProfileScreenViewModel: ProfileScreenViewModelProtocol {
 			.bind(to: sections)
 			.disposed(by: disposeBag)
 		
-
 		
 		let output = ProfileScreenViewModelOutput(sections: sections.asDriver(onErrorJustReturn: []))
 		

@@ -20,13 +20,13 @@ class ProfileScreenViewController: UIViewController, StoryboardBased {
 	private var output: ProfileScreenViewModelOutputProtocol!
 	private var viewModel: ProfileScreenViewModelProtocol!
 	
-	private let onAppear = PublishRelay<Void>()
 	private var imagePicker: ImagePicker!
+	
+	private let onAppear = PublishRelay<Void>()
 	private var userImage = BehaviorRelay<UIImage>(value: UIImage(named: "userImage")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		configureUI()
 		bindUI()
     }
@@ -48,7 +48,6 @@ private extension ProfileScreenViewController {
 		configureViews()
 		configureTableView()
 		configureImagePicker()
-		
 	}
 	
 	func configureViews() {
@@ -97,7 +96,7 @@ private extension ProfileScreenViewController {
 	}
 	
 	func bindViewModel(){
-		let input = ProfileScreenViewModelInput(onAppear: onAppear.asObservable(), imagePicker: imagePicker, tableView: tableView, userImage: userImage)
+		let input = ProfileScreenViewModelInput(onAppear: onAppear.asObservable(), imagePicker: imagePicker, userImage: userImage)
 	
 
 		output = viewModel.transform(input: input)

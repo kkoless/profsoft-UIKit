@@ -143,7 +143,7 @@ private extension LoginScreenViewController {
 	}
 	
 	func configureCompanyLogo(){
-		companyLogoImageView.image = Consts.ImageLoginScreen.companyLogo
+		companyLogoImageView.image = UIImage(named: "companyLogo")
 	}
 	
 	
@@ -189,7 +189,7 @@ private extension LoginScreenViewController {
 			guard let self = self else { return }
 			self.passwordTextField.isSecureTextEntry = !self.passwordTextField.isSecureTextEntry
 			self.showPassState.accept(!self.showPassState.value)
-			self.showPassButton.setImage(state ? Consts.ImageLoginScreen.openEye : Consts.ImageLoginScreen.closeEye, for: .normal)
+			self.showPassButton.setImage(state ? UIImage(named: "openEye") : UIImage(named: "closeEye"), for: .normal)
 		})
 		.disposed(by: disposeBag)
 	}

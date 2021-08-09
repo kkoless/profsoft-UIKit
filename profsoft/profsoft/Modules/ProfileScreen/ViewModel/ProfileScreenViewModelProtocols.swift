@@ -12,7 +12,6 @@ import RxSwift
 protocol ProfileScreenViewModelInputProtocol {
 	var onAppear: Observable<Void> { get }
 	var imagePicker: ImagePicker { get }
-	var tableView: UITableView { get }
 	var userImage: BehaviorRelay<UIImage> { get }
 }
 

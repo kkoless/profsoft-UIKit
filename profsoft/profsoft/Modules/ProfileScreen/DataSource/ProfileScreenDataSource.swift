@@ -28,7 +28,6 @@ enum ProfileScreenItem {
 	case certificate
 	case share
 	case showLess(model: ShowLessCellModelProtocol)
-	// и другие
 }
 
 final class ProfileScreenDataSource {
@@ -85,7 +84,6 @@ final class ProfileScreenDataSource {
 				return CellBuilder<ShowLessTableViewCell>.build(tableView: tableView,
 															  indexPath: indexPath,
 															  model: model)
-				
 				
 			default:
 				return UITableViewCell()

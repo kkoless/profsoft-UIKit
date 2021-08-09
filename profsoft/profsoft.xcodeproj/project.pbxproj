@@ -53,6 +53,14 @@
 		E521C2ED26C0036D00381EC3 /* SplashScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521C2EC26C0036D00381EC3 /* SplashScreenViewController.storyboard */; };
 		E521C2F026C0041600381EC3 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2EF26C0041600381EC3 /* SplashPresenter.swift */; };
 		E521C2F226C0067300381EC3 /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2F126C0067300381EC3 /* SplashAnimator.swift */; };
+		E521C2FC26C1431A00381EC3 /* GeneralScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2FB26C1431A00381EC3 /* GeneralScreenViewController.swift */; };
+		E521C2FE26C1433600381EC3 /* GeneralScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521C2FD26C1433600381EC3 /* GeneralScreenViewController.storyboard */; };
+		E521C30026C143C200381EC3 /* GeneralScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C2FF26C143C200381EC3 /* GeneralScreenViewModelProtocols.swift */; };
+		E521C30226C143CC00381EC3 /* GeneralScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C30126C143CC00381EC3 /* GeneralScreenViewModel.swift */; };
+		E521C30426C144B200381EC3 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C30326C144B200381EC3 /* SearchScreenViewController.swift */; };
+		E521C30626C144C000381EC3 /* SearchScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E521C30526C144C000381EC3 /* SearchScreenViewController.storyboard */; };
+		E521C30826C1451200381EC3 /* SearchScreenViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C30726C1451200381EC3 /* SearchScreenViewModelProtocols.swift */; };
+		E521C30A26C1451E00381EC3 /* SearchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521C30926C1451E00381EC3 /* SearchScreenViewModel.swift */; };
 		E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */; };
 		E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */; };
 		E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */; };
@@ -132,6 +140,14 @@
 		E521C2EC26C0036D00381EC3 /* SplashScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreenViewController.storyboard; sourceTree = "<group>"; };
 		E521C2EF26C0041600381EC3 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		E521C2F126C0067300381EC3 /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
+		E521C2FB26C1431A00381EC3 /* GeneralScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralScreenViewController.swift; sourceTree = "<group>"; };
+		E521C2FD26C1433600381EC3 /* GeneralScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralScreenViewController.storyboard; sourceTree = "<group>"; };
+		E521C2FF26C143C200381EC3 /* GeneralScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		E521C30126C143CC00381EC3 /* GeneralScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralScreenViewModel.swift; sourceTree = "<group>"; };
+		E521C30326C144B200381EC3 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
+		E521C30526C144C000381EC3 /* SearchScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreenViewController.storyboard; sourceTree = "<group>"; };
+		E521C30726C1451200381EC3 /* SearchScreenViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModelProtocols.swift; sourceTree = "<group>"; };
+		E521C30926C1451E00381EC3 /* SearchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewModel.swift; sourceTree = "<group>"; };
 		E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		E534E91E26B1685D00C2A38B /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56FAC9426BB2D8600A9689A /* Golos Text_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Golos Text_Medium.ttf"; path = "../../../../../../Downloads/golostext/Golos Text_Medium.ttf"; sourceTree = "<group>"; };
@@ -412,6 +428,73 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E521C2F526C142D000381EC3 /* GeneralScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2F826C142F400381EC3 /* ViewModel */,
+				E521C2F726C142EC00381EC3 /* View */,
+			);
+			path = GeneralScreen;
+			sourceTree = "<group>";
+		};
+		E521C2F626C142DF00381EC3 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2FA26C1430100381EC3 /* ViewModel */,
+				E521C2F926C142FC00381EC3 /* View */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		E521C2F726C142EC00381EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2FB26C1431A00381EC3 /* GeneralScreenViewController.swift */,
+				E521C2FD26C1433600381EC3 /* GeneralScreenViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E521C2F826C142F400381EC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E521C2FF26C143C200381EC3 /* GeneralScreenViewModelProtocols.swift */,
+				E521C30126C143CC00381EC3 /* GeneralScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E521C2F926C142FC00381EC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E521C30326C144B200381EC3 /* SearchScreenViewController.swift */,
+				E521C30526C144C000381EC3 /* SearchScreenViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E521C2FA26C1430100381EC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E521C30726C1451200381EC3 /* SearchScreenViewModelProtocols.swift */,
+				E521C30926C1451E00381EC3 /* SearchScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E521C30C26C1461400381EC3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E5709F8626B09833005FAC4A /* AppFlow.swift */,
+				E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */,
+				E514D9E526B84F8E00647DE9 /* DashboardFlow.swift */,
+				E514D9E326B7F2DB00647DE9 /* PrivateFlow.swift */,
+				E521C2D226BDD8D500381EC3 /* GeneralFlow.swift */,
+				E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
 		E56FAC9126BAD1EE00A9689A /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +589,8 @@
 				E5709F8C26B09E51005FAC4A /* StartScreen */,
 				E5855F9726B1B66400E104BE /* LoginScreen */,
 				E514D9E726B855F600647DE9 /* ProfileScreen */,
+				E521C2F526C142D000381EC3 /* GeneralScreen */,
+				E521C2F626C142DF00381EC3 /* SearchScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -536,12 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				E5709F8426B097FC005FAC4A /* AppStep.swift */,
-				E5709F8626B09833005FAC4A /* AppFlow.swift */,
-				E534E91C26B15DF400C2A38B /* OnboardingFlow.swift */,
-				E514D9E526B84F8E00647DE9 /* DashboardFlow.swift */,
-				E514D9E326B7F2DB00647DE9 /* PrivateFlow.swift */,
-				E521C2D226BDD8D500381EC3 /* GeneralFlow.swift */,
-				E521C2D426BDD8DD00381EC3 /* SearchFlow.swift */,
+				E521C30C26C1461400381EC3 /* Flows */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -709,6 +789,7 @@
 				E521C2D126BDD5BC00381EC3 /* CertificateTableViewCell.xib in Resources */,
 				E521C2ED26C0036D00381EC3 /* SplashScreenViewController.storyboard in Resources */,
 				E521C2BF26BC74EF00381EC3 /* StudyTableViewCell.xib in Resources */,
+				E521C2FE26C1433600381EC3 /* GeneralScreenViewController.storyboard in Resources */,
 				E514D9F026B8568800647DE9 /* ProfileScreenViewController.storyboard in Resources */,
 				E50ADC1D26BACE00003BEE66 /* SectionCourcesTableViewCell.xib in Resources */,
 				E521C2DF26BDE67B00381EC3 /* ShowLessTableViewCell.xib in Resources */,
@@ -722,6 +803,7 @@
 				E56FAC9526BB2D8600A9689A /* Golos Text_Medium.ttf in Resources */,
 				E56FAC9C26BB3D9B00A9689A /* DirectionTableViewCell.xib in Resources */,
 				E56FACA326BB40DD00A9689A /* EducationFormTableViewCell.xib in Resources */,
+				E521C30626C144C000381EC3 /* SearchScreenViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +865,7 @@
 				E5855FAB26B2A9FA00E104BE /* LoginScreenTextFields.swift in Sources */,
 				E5709F8726B09833005FAC4A /* AppFlow.swift in Sources */,
 				E514DA1226B9C75500647DE9 /* APIServiceContainer.swift in Sources */,
+				E521C30826C1451200381EC3 /* SearchScreenViewModelProtocols.swift in Sources */,
 				E5855F9F26B1B72B00E104BE /* LoginScreenViewModelProtocols.swift in Sources */,
 				E521C2D926BDDC0A00381EC3 /* ShareTableViewCell.swift in Sources */,
 				E521C2F226C0067300381EC3 /* SplashAnimator.swift in Sources */,
@@ -796,6 +879,7 @@
 				E5709F6326B0901B005FAC4A /* AppDelegate.swift in Sources */,
 				E56FACA926BB484800A9689A /* StudyPeriodTableViewCell.swift in Sources */,
 				E521C2BE26BC74EF00381EC3 /* StudyTableViewCell.swift in Sources */,
+				E521C30226C143CC00381EC3 /* GeneralScreenViewModel.swift in Sources */,
 				E521C2D326BDD8D500381EC3 /* GeneralFlow.swift in Sources */,
 				E514D9EC26B8564000647DE9 /* ProfileScreenViewController.swift in Sources */,
 				E521C2DE26BDE67B00381EC3 /* ShowLessTableViewCell.swift in Sources */,
@@ -805,11 +889,13 @@
 				E514DA1426B9C78D00647DE9 /* MediatorServiceContainer.swift in Sources */,
 				E5855FB426B34F7600E104BE /* AlertHelper.swift in Sources */,
 				E534E91D26B15DF400C2A38B /* OnboardingFlow.swift in Sources */,
+				E521C2FC26C1431A00381EC3 /* GeneralScreenViewController.swift in Sources */,
 				E514DA0526B9C56F00647DE9 /* ServerResponse.swift in Sources */,
 				E521C2D526BDD8DD00381EC3 /* SearchFlow.swift in Sources */,
 				E521C2F026C0041600381EC3 /* SplashPresenter.swift in Sources */,
 				E521C2D026BDD5BC00381EC3 /* CertificateTableViewCell.swift in Sources */,
 				E56FAC9E26BB408800A9689A /* EducationFormCellModelProtocol.swift in Sources */,
+				E521C30426C144B200381EC3 /* SearchScreenViewController.swift in Sources */,
 				E514D9FD26B8872A00647DE9 /* HeaderCellModelProtocol.swift in Sources */,
 				E514D9F226B856CC00647DE9 /* ProfileScreenViewModel.swift in Sources */,
 				E521C2C126BC75BB00381EC3 /* StudyCellModelProtocol.swift in Sources */,
@@ -818,6 +904,7 @@
 				E514D9F926B8840700647DE9 /* HeaderTableViewCell.swift in Sources */,
 				E521C2B926BBE7D400381EC3 /* ShowMoreTableViewCell.swift in Sources */,
 				E50ADC1C26BACE00003BEE66 /* SectionCourcesTableViewCell.swift in Sources */,
+				E521C30A26C1451E00381EC3 /* SearchScreenViewModel.swift in Sources */,
 				E521C2EB26C002EA00381EC3 /* SplashScreenViewController.swift in Sources */,
 				E514DA1026B9C6BE00647DE9 /* GeneralAPI.swift in Sources */,
 				E56FAC9B26BB3D9B00A9689A /* DirectionTableViewCell.swift in Sources */,
@@ -828,6 +915,7 @@
 				E514D9FF26B8953900647DE9 /* ProfileScreenDataSource.swift in Sources */,
 				E514DA1B26B9D83B00647DE9 /* CertificateNumbCellModelProtocol.swift in Sources */,
 				E534E91F26B1685D00C2A38B /* StartScreenViewController.swift in Sources */,
+				E521C30026C143C200381EC3 /* GeneralScreenViewModelProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
