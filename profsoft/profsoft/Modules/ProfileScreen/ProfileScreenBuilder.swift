@@ -23,7 +23,7 @@ struct ProfileScreenBuilder {
 		let educationFormModel = EducationFormCellModel(educationName: "очная")
 		let studyPeriodModel = StudyPeriodCellModel(startPeriod: "01.07.2021", endPeriod: "30.08.2021")
 		let showMoreModel = ShowMoreCellModel(tapToMore: showTapMore)
-		let showLessModel = ShowLessCellModel(tapToLess: showTapLess)
+		_ = ShowLessCellModel(tapToLess: showTapLess)
 
 		
 		let user = ProfileScreenItem.header(model: headerModel)

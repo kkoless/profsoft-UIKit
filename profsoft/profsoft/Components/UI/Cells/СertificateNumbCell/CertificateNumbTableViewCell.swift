@@ -47,12 +47,12 @@ private extension CertificateNumbTableViewCell {
 
 	func configureTitleLabel() {
 		titleLabel.textColor = .gray
-		titleLabel.font = UIFont(name: "Golos", size: 15)
+		titleLabel.font = UIFont(name: "Golos", size: 16)
 	}
 	
 	
 	func configureCertificateIdLabel() {
 		certificateIdLabel.textColor = .black
-		certificateIdLabel.font = UIFont(name: "Golos", size: 15)
+		certificateIdLabel.font = UIFont(name: "Golos", size: 16)
 	}
 }

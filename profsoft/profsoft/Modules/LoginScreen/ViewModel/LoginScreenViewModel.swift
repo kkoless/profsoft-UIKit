@@ -136,17 +136,16 @@ private extension LoginScreenViewModel {
 		showPassButton.setImage(UIImage(named: "redOpenEye"), for: .normal)
 	}
 	
+	
+	// -------
+	
+	
 	func validUserEmailData(data: String) -> Bool {
 		!data.contains("@") || !data.contains(".") ? false : true
 	}
 	
 	func validUserPasswordData(data: String) -> Bool {
 		data.count < 6 ? false : true
-	}
-	
-	func apdateEnterButton(enterButton: UIButton) {
-		enterButton.backgroundColor = .black
-		enterButton.layer.borderColor = UIColor.black.cgColor
 	}
 	
 }

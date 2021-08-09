@@ -180,6 +180,7 @@ private extension LoginScreenViewController {
 		passwordTextField.layer.borderColor = UIColor.black.cgColor
 		passwordTextField.layer.borderWidth = 1.5
 		passwordTextField.layer.cornerRadius = 22
+		passwordTextField.layer.masksToBounds = true
 		
 		passwordTextField.layer.masksToBounds = true
 		passwordTextField.rightViewMode = .always
@@ -210,7 +211,7 @@ private extension LoginScreenViewController {
 	
 	func configureShowPassButton() {
 		showPassButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -25, bottom: 0, right: 25)
-		showPassButton.setImage(Consts.ImageLoginScreen.openEye, for: .normal)
+		showPassButton.setImage(UIImage(named: "openEye"), for: .normal)
 	}
 	
 	func configureForgotPassButton() {
