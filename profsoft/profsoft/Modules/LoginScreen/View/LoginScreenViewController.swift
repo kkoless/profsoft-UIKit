@@ -158,7 +158,7 @@ private extension LoginScreenViewController {
 	 
 	func configureEnterButton() {
 		enterButton.setTitle("Вход", for: .normal)
-		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 16)
+		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 17)
 		enterButton.tintColor = .white
 		
 		enterButton.backgroundColor = .gray
@@ -179,7 +179,7 @@ private extension LoginScreenViewController {
 		
 		passwordTextField.layer.borderColor = UIColor.black.cgColor
 		passwordTextField.layer.borderWidth = 1.5
-		passwordTextField.layer.cornerRadius = 22
+		passwordTextField.layer.cornerRadius = 28
 		passwordTextField.layer.masksToBounds = true
 		
 		passwordTextField.layer.masksToBounds = true
@@ -204,7 +204,7 @@ private extension LoginScreenViewController {
 		
 		emailTextField.layer.borderColor = UIColor.black.cgColor
 		emailTextField.layer.borderWidth = 1.5
-		emailTextField.layer.cornerRadius = 22
+		emailTextField.layer.cornerRadius = 28
 		emailTextField.layer.masksToBounds = true
 	}
 	

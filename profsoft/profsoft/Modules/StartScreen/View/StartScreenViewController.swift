@@ -53,7 +53,7 @@ private extension StartScreenViewController {
 	
 	func configureEnterButton(){
 		enterButton.setTitle("Вход", for: .normal)
-		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 16)
+		enterButton.titleLabel?.font = UIFont(name: "Golos", size: 17)
 		enterButton.tintColor = .white
 		
 		enterButton.backgroundColor = .black
@@ -66,7 +66,7 @@ private extension StartScreenViewController {
 	
 	func configureSkipButton(){
 		skipButton.setTitle("Продолжить без регистрации", for: .normal)
-		skipButton.titleLabel?.font = UIFont(name: "Golos", size: 16)
+		skipButton.titleLabel?.font = UIFont(name: "Golos", size: 17)
 		skipButton.tintColor = .black
 		
 		skipButton.backgroundColor = .white
