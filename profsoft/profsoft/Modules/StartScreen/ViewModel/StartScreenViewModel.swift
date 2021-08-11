@@ -11,9 +11,8 @@ import RxSwift
 import RxFlow
 
 struct StartScreenViewModelInput: StartScreenViewModelInputProtocol {
-	var enterButton: UIButton
-	var skipButton: UIButton
-	
+	let onEnterButtonTap: Observable<Void>
+	let onSkipButtonTap: Observable<Void>
 }
 
 struct StartScreenViewModelOutput: StartScreenViewModelOutputProtocol {
@@ -29,8 +28,15 @@ struct StartScreenViewModel: Stepper {
 extension StartScreenViewModel: StartScreenViewModelProtocol {
 	func transform(input: StartScreenViewModelInputProtocol) -> StartScreenViewModelOutputProtocol {
 		
-		input.enterButton.rx.tap
-			.map{ AppStep.login }.bind(to: steps).disposed(by: disposeBag)
+		input.onEnterButtonTap
+			.map { AppStep.login }
+			.bind(to: steps)
+			.disposed(by: disposeBag)
+		
+		input.onSkipButtonTap
+			.map { AppStep.userSkipLogin }
+			.bind(to: steps)
+			.disposed(by: disposeBag)
 		
 		
 		let output = StartScreenViewModelOutput()

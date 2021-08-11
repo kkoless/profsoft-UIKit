@@ -93,7 +93,9 @@ private extension StartScreenViewController {
 	}
 	
 	func bindViewModel(){
-		let input = StartScreenViewModelInput(enterButton: enterButton, skipButton: skipButton)
+		let onEnterButtonTap = enterButton.rx.tap.asObservable()
+		let onSkipButtonTap = skipButton.rx.tap.asObservable()
+		let input = StartScreenViewModelInput(onEnterButtonTap: onEnterButtonTap, onSkipButtonTap: onSkipButtonTap)
 
 		output = viewModel.transform(input: input)
 	}

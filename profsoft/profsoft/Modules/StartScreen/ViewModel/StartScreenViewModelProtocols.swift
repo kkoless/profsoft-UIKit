@@ -11,8 +11,8 @@ import RxCocoa
 import RxSwift
 
 protocol StartScreenViewModelInputProtocol {
-	var enterButton: UIButton { get }
-	var skipButton: UIButton { get }
+	var onEnterButtonTap: Observable<Void> { get }
+	var onSkipButtonTap: Observable<Void> { get }
 }
 
 protocol StartScreenViewModelOutputProtocol {
