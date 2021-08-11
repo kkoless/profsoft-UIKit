@@ -10,18 +10,19 @@ import RxCocoa
 import RxSwift
 
 protocol LoginScreenViewModelInputProtocol {
-	var forgotPassButton: UIButton { get }
-	var enterButton: UIButton { get }
-	var showPassButton: UIButton { get }
+	var onForgotPassButtonTap: Observable<Void> { get }
+	var onEnterButtonTap: Observable<Void> { get }
+	var onShowPassButtonTap: Observable<Void> { get }
 	
-	var passwordTextField: UITextField { get }
-	var emailTextField: UITextField { get }
-	
-	var passwordErrorLabel: UILabel { get }
-	var emailErrorLabel: UILabel { get }
+	var passwordText: Observable<String> { get }
+	var emailText: Observable<String> { get }
 }
 
 protocol LoginScreenViewModelOutputProtocol {
+	var errorPassData: Driver<Void> { get }
+	var errorEmailData: Driver<Void> { get }
+	var successPassData: Driver<Void> { get }
+	var successEmailData: Driver<Void> { get }
 }
 
 protocol LoginScreenViewModelProtocol {

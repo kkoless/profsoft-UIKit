@@ -11,19 +11,19 @@ import RxSwift
 import RxFlow
 
 struct LoginScreenViewModelInput: LoginScreenViewModelInputProtocol {
-	var emailTextField: UITextField
-	var passwordTextField: UITextField
+	let onForgotPassButtonTap: Observable<Void>
+	let onEnterButtonTap: Observable<Void>
+	let onShowPassButtonTap: Observable<Void>
 	
-	var forgotPassButton: UIButton
-	var enterButton: UIButton
-	var showPassButton: UIButton
-	
-	var passwordErrorLabel: UILabel
-	var emailErrorLabel: UILabel
+	let passwordText: Observable<String>
+	let emailText: Observable<String>
 }
 
 struct LoginScreenViewModelOutput: LoginScreenViewModelOutputProtocol {
-	
+	let errorPassData: Driver<Void>
+	let errorEmailData: Driver<Void>
+	let successPassData: Driver<Void>
+	let successEmailData: Driver<Void>
 }
 
 struct LoginScreenViewModel: Stepper {
@@ -35,42 +35,49 @@ extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 	
 	func transform(input: LoginScreenViewModelInputProtocol) -> LoginScreenViewModelOutputProtocol {
 		
-		let validEmailData = input.emailTextField.rx.text.orEmpty
-			.flatMap{ data -> Observable<Bool> in
-				if data.isEmpty || !validUserEmailData(data: data){
-					return .just(false)
-				}
-
-				return .just(true)
-			}
-
-		let validPasswordData = input.passwordTextField.rx.text.orEmpty
-			.flatMap{ data -> Observable<Bool> in
-				if data.isEmpty || !validUserPasswordData(data: data){
-					return .just(false)
-				}
-
-				return .just(true)
-			}
+		let errorPassData = PublishRelay<Void>()
+		let errorEmailData = PublishRelay<Void>()
+		let successPassData = PublishRelay<Void>()
+		let successEmailData = PublishRelay<Void>()
 		
-		input.enterButton.rx.tap
+		
+		input.onEnterButtonTap
 			.map{ _ in
-				let userEmail = input.emailTextField.text!
-				let userPassword = input.passwordTextField.text!
+				let userEmail = input.emailText
+				let userPassword = input.passwordText
 				
 				if loginToAccount(email: userEmail, password: userPassword) { return AppStep.loginSucces }
 				
 				else {
-					validEmailData.subscribe(onNext: { data in
-						data ? validEmailTF(emailTextField: input.emailTextField, emailErrorLabel: input.emailErrorLabel) : notValidEmailTF(emailTextField: input.emailTextField, emailErrorLabel: input.emailErrorLabel)
-						
-					}).disposed(by: disposeBag)
+					
+					input.emailText
+						.map { !($0.isEmpty || !validUserEmailData(data: $0)) }
+						.filter { !$0 }
+						.map { _ in Void() }
+						.bind(to: errorEmailData)
+						.disposed(by: disposeBag)
+					
+					input.emailText
+						.map { !($0.isEmpty || !validUserEmailData(data: $0)) }
+						.filter { $0 }
+						.map { _ in Void() }
+						.bind(to: successEmailData)
+						.disposed(by: disposeBag)
 					
 					
-					validPasswordData.subscribe(onNext: { data in
-						data ? validPasswordTF(passwordTextField: input.passwordTextField, passwordErrorLabel: input.passwordErrorLabel, showPassButton: input.showPassButton) : notValidPasswordTF(passwordTextField: input.passwordTextField, passwordErrorLabel: input.passwordErrorLabel, showPassButton: input.showPassButton)
-						
-					}).disposed(by: disposeBag)
+					input.passwordText
+						.map { !($0.isEmpty || !validUserPasswordData(data: $0)) }
+						.filter { !$0 }
+						.map { _ in Void() }
+						.bind(to: errorPassData)
+						.disposed(by: disposeBag)
+					
+					input.passwordText
+						.map { !($0.isEmpty || !validUserPasswordData(data: $0)) }
+						.filter { $0 }
+						.map { _ in Void() }
+						.bind(to: successPassData)
+						.disposed(by: disposeBag)
 					
 					return AppStep.none
 				}
@@ -79,13 +86,18 @@ extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 			.disposed(by: disposeBag)
 		
 		
-		input.forgotPassButton.rx.tap
-			.map{AppStep.showAlert}
+		input.onForgotPassButtonTap
+			.map{ AppStep.showAlert }
 			.bind(to: steps)
 			.disposed(by: disposeBag)
 		
 		
-		let output = LoginScreenViewModelOutput()
+		let output = LoginScreenViewModelOutput(
+			errorPassData: errorPassData.asDriver(onErrorDriveWith: .never()),
+			errorEmailData: errorEmailData.asDriver(onErrorDriveWith: .never()),
+			successPassData: successPassData.asDriver(onErrorDriveWith: .never()),
+			successEmailData: successEmailData.asDriver(onErrorDriveWith: .never())
+		)
 		
 		return output
 	}
@@ -93,52 +105,29 @@ extension LoginScreenViewModel: LoginScreenViewModelProtocol {
 
 private extension LoginScreenViewModel {
 	
-	func loginToAccount(email: String, password: String) -> Bool {
+	func loginToAccount(email: Observable<String>, password: Observable<String>) -> Bool {
 		let userEmail = Consts.UserCredentials.email
 		let userPassword = Consts.UserCredentials.password
 		
-		let resp = email == userEmail && password == userPassword ? true : false
+		var inputEmail = ""
+		var inputPass = ""
+		
+		email.subscribe(onNext: {
+			text in
+			inputEmail = text
+		})
+		.disposed(by: disposeBag)
+		
+		password.subscribe(onNext: {
+			text in
+			inputPass = text
+		})
+		.disposed(by: disposeBag)
+		
+		let resp = inputEmail == userEmail && inputPass == userPassword ? true : false
 		
 		return resp
 	}
-	
-	
-	// --------
-	
-	
-	func validEmailTF(emailTextField: UITextField, emailErrorLabel: UILabel){
-		emailTextField.layer.borderColor = UIColor.black.cgColor
-		emailTextField.textColor = .black
-		emailErrorLabel.text = ""
-	}
-	func notValidEmailTF(emailTextField: UITextField, emailErrorLabel: UILabel){
-		emailTextField.layer.borderColor = UIColor.red.cgColor
-		emailTextField.textColor = .red
-		emailErrorLabel.text = "Неверная форма ввода"
-	}
-	
-	
-	// -------
-	
-	
-	func validPasswordTF(passwordTextField: UITextField, passwordErrorLabel: UILabel, showPassButton: UIButton){
-		passwordTextField.layer.borderColor = UIColor.black.cgColor
-		passwordTextField.textColor = .black
-		passwordErrorLabel.text = ""
-		showPassButton.setImage(UIImage(named: "openEye"), for: .normal)
-		
-	}
-	
-	func notValidPasswordTF(passwordTextField: UITextField, passwordErrorLabel: UILabel, showPassButton: UIButton){
-		passwordTextField.layer.borderColor = UIColor.red.cgColor
-		passwordTextField.textColor = .red
-		passwordErrorLabel.text = "Пароль должен быть не менее 6 символов"
-		showPassButton.setImage(UIImage(named: "redOpenEye"), for: .normal)
-	}
-	
-	
-	// -------
-	
 	
 	func validUserEmailData(data: String) -> Bool {
 		!data.contains("@") || !data.contains(".") ? false : true
