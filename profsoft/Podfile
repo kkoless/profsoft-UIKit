@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '14.5'
+
+target 'profsoft' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for profsoft
+
+	pod 'RxSwift', '5.1.1'
+	pod 'RxCocoa', '5.1.1'
+	pod 'RxTheme', '4.1.1'
+	pod 'RxDataSources', '4.0.0'
+	pod 'RxFlow'
+	pod 'Moya', '~> 14.0'
+	pod 'Reusable', '4.1.1'
+
+end
