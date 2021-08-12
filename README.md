@@ -22,3 +22,4 @@
 
 <img src="PREVIEW/10.png" width="300px" height="600px"> <img src="PREVIEW/11.png" width="300px" height="600px"> 
 
+При запуске приложения появляется SplashScreen с анимацией (появление логотипа компании)
